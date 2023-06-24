@@ -1,3 +1,5 @@
 # ILUD
 I Link Up Direct
-using the reduxtoolkit as state manager
+using the reduxtoolkit and zod as state manager
+typescript and tailwindcss
+nextjs 13 framework
