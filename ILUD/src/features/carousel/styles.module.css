@@ -1,0 +1,22 @@
+.container{
+  width: 90%;
+  height: 25%;
+  border: 1px solid silver;
+  box-shadow: 10px 10px 8px 10px #888888;
+  position: absolute;
+  display: flex;
+  justify-self: center;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+.img{
+  max-width: inherit;
+  max-height: inherit;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+ 
+}

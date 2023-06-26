@@ -1,7 +1,9 @@
 "use client"
+import styles from './styles.module.css'
 import './globals.css'
 import { store } from './store'
 import { Provider } from 'react-redux'
+
 
 export const metadata = {
   title: 'Create Next App',

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
+import styles from './styles.module.css'
 
 
 
@@ -28,7 +29,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, showButtons = true }) => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className={styles.main}>
       {showButtons && (
         <>
           <button className="absolute top-1/2 left-2 transform -translate-y-1/2" onClick={handlePrev}>
@@ -39,13 +40,13 @@ const Carousel: React.FC<CarouselProps> = ({ items, showButtons = true }) => {
           </button>
         </>
       )}
-
-      <div className="flex justify-center items-center h-48">
-      <Image
+  
+      <div className={styles.container}>
+      <Image className={styles.img}
       src={items[activeIndex]}
-      width={500}
-      height={500}
       alt="Picture of the author"
+      fill={true}
+      style={{objectFit: "contain"}}
        />
       </div>
     </div>
