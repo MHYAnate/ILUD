@@ -4,20 +4,20 @@ import { Counter } from "@/features/counter/counter"
 
 
   const items = ['/img/aa.jpg','/img/i.jpg','/img/aa.jpg','/img/intermix_o.jpg'];
-
+  const like = 2;
+  const dislike =2;
 
 export default function Home() {
   return (
     <>
-      <div className="text text-green-700">BismiLLAHI RAHMAANI RAHIIM</div>
-      <div>
+      {/* <div className="text text-green-700">BismiLLAHI RAHMAANI RAHIIM</div>
         <div className="">
           <Counter/>
-        </div>
+        </div> */}
         <div>
-          <Carousel items={items} showButtons={true} />
+          <Carousel items={items} like={like} dislike={dislike} />
         </div>
-      </div>
+     
       
      
       

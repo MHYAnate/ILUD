@@ -1,22 +1,52 @@
-.container{
-  width: 90%;
-  height: 25%;
-  border: 1px solid silver;
-  box-shadow: 10px 10px 8px 10px #888888;
-  position: absolute;
+.parent{
   display: flex;
-  justify-self: center;
-  border-top-right-radius: 25%;
-  border-bottom-left-radius: 25%;
-}
-.img{
-  max-width: inherit;
-  max-height: inherit;
+  width: 100vw;
+  height: 30vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center;
 }
 .main{
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 15vh;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+  margin-top: 2%;
+  
+}
+.imgform{
+  display: flex;
+  justify-content: space-evenly;
+}
+.imgcontainer{
+ width: 20vw;
+ height: 25vh;
+ border-left: 1px solid silver;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ text-align: center;
+}
+.img{
+ width: inherit;
+ height: inherit;
+
+}
+.form{
+  width: 65vw;
+  height: 25vh;
+  border-right: 1px solid silver;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.carousel_footer{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  margin-left: 1.9%;
+  margin-right: 1.9%;
+}
+.btn{
+  border: 1px solid silver;
+
+}
+@media screen and (min-width: 700px) {
  
 }

@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image'
 import styles from './styles.module.css'
-
+import Link from 'next/link'
 
 
 interface CarouselProps {
   items: string[]; // An array of items to display in the carousel
-  showButtons?: boolean; // Optional prop to show/hide control buttons
+  like: number
+  dislike: number
 }
 
-const Carousel: React.FC<CarouselProps> = ({ items, showButtons = true }) => {
+const Carousel: React.FC<CarouselProps> = ({ items,like,dislike}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
@@ -29,27 +29,35 @@ const Carousel: React.FC<CarouselProps> = ({ items, showButtons = true }) => {
   }, []);
 
   return (
+    <div className={styles.parent}>
     <div className={styles.main}>
-      {showButtons && (
-        <>
-          <button className="absolute top-1/2 left-2 transform -translate-y-1/2" onClick={handlePrev}>
-            Previous
-          </button>
-          <button className="absolute top-1/2 right-2 transform -translate-y-1/2" onClick={handleNext}>
-            Next
-          </button>
-        </>
-      )}
-  
-      <div className={styles.container}>
-      <Image className={styles.img}
-      src={items[activeIndex]}
-      alt="Picture of the author"
-      fill={true}
-      style={{objectFit: "contain"}}
-       />
+        <div className={styles.imgform}>
+          <div className={styles.imgcontainer} >
+            <img 
+              className={styles.img}
+              src={items[activeIndex]}
+              alt="Picture"
+            />
+          </div>
+          <form className={styles.form}>
+            <input type="text" id="fname" name="fname">{}</input>
+            <input type="text" id="fname" name="fname">{}</input>
+            <input type="text" id="fname" name="fname">{}</input>
+            <input type="text" id="fname" name="fname">{}</input>
+          </form>
+        </div>
+          <div className={styles.carousel_footer} >
+            <Link href="">LinkUpDirect</Link>
+            <div>
+              <button className={styles.btn}>{like}</button>
+              <button className={styles.btn}>{dislike}</button>
+            </div>
+          </div>
+        
+      
       </div>
-    </div>
+      </div>
+   
   );
 };
 
