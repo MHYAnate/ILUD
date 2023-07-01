@@ -1,9 +1,8 @@
 "use client"
 import Carousel from "@/features/carousel/carousel"
 import { Counter } from "@/features/counter/counter"
-
-
-  const items = ['/img/aa.jpg','/img/i.jpg','/img/aa.jpg','/img/intermix_o.jpg'];
+import { items } from "@/features/carousel/carouselData";
+ 
   const like = 2;
   const dislike =2;
 
