@@ -30,32 +30,30 @@ const Carousel: React.FC<CarouselProps> = ({ items,like,dislike}) => {
 
   return (
     <div className={styles.parent}>
-    <div className={styles.main}>
-        <div className={styles.imgform}>
           <div className={styles.imgcontainer} >
             <img 
               className={styles.img}
               src={items[activeIndex].img}
               alt="Picture"
             />
+             <Link className={styles.link} href="">LinkUpDirect</Link>
           </div>
           <div className={styles.form}>
             <span className={styles.header}>{items[activeIndex].title}</span>
             <span className={styles.formSpan}>{items[activeIndex].name}</span>
             <span className={styles.formSpan}>{items[activeIndex].contact}</span>
             <span className={styles.formSpan}>{items[activeIndex].address}</span>
+            <div className={styles.carousel_footer} >
+             <button className={styles.btn}>Like {items[activeIndex].like}</button>
+             <button className={styles.btn}>DisLike {items[activeIndex].dislike}</button>
+          
+         </div>
           </div>
-        </div>
-          <div className={styles.carousel_footer} >
-            <Link href="">LinkUpDirect</Link>
-            <div className={styles.btnCon}>
-              <button className={styles.btn}>Like {items[activeIndex].like}</button>
-              <button className={styles.btn}>DisLike {items[activeIndex].dislike}</button>
-            </div>
-          </div>
+   
+        
         
       
-      </div>
+      
       </div>
    
   );
