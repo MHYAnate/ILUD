@@ -3,8 +3,7 @@ import Carousel from "@/features/carousel/carousel"
 import { Counter } from "@/features/counter/counter"
 import { items } from "@/features/carousel/carouselData";
  
-  const like = 2;
-  const dislike =2;
+  
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
           <Counter/>
         </div> */}
         <div>
-          <Carousel items={items} like={like} dislike={dislike} />
+          <Carousel items={items} />
         </div>
      
       

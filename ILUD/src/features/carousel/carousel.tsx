@@ -5,11 +5,9 @@ import Link from 'next/link'
 
 interface CarouselProps {
   items: { id: number; title: string; contact: string; address: string; img: string; name: string, like: number, dislike: number }[]; // An array of items to display in the carousel
-  like: number
-  dislike: number
 }
 
-const Carousel: React.FC<CarouselProps> = ({ items,like,dislike}) => {
+const Carousel: React.FC<CarouselProps> = ({ items}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
