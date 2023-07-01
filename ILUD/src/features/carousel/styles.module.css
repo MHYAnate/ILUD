@@ -7,21 +7,46 @@
   margin-top: 0.333%;
   justify-content: space-between;
 }
-
+.imgform{
+  width: 30vw;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .imgcontainer{
  width: 30vw;
  height: 24vh;
- margin-top: 0.5%;
+ margin-top: 0.3%;
  margin-left: 2%;
  border-left: 1px solid silver;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ box-shadow: 1px 1px 2px grey;
  text-align: center;
- border-radius: 10px;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
 }
 .img{
  width: inherit;
  height: inherit;
  border-radius: inherit;
+}
+.linkBtn{
+  border: 1px solid silver;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 1px 2px grey;
+  width: inherit;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.5%;
+}
+.link{
+  font-size: 0.7em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 .form{
   width: 67vw;
@@ -52,23 +77,25 @@
   font-size: 1em;
   overflow-y: auto;
 }
-.link{
-  border: 1px solid silver;
-  border-radius: 2px;
-  box-shadow: 1px 1px 2px grey;
-  font-size: 0.7em;
-  font-weight: 500;
-}
-.btnCon{
-  width: 75%;
-  display: flex;
-  justify-content: space-between;
-  
-}
 .btn{
   border: 1px solid silver;
   width: 50%;
   box-shadow: 1px 1px 2px grey;
-  height: 80%;
+  height: 95%;
+  font-weight: bold;
+}
+.btnSpan1{
+  margin-right: 10%;
+  padding-right: 2%;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px dodgerblue, 0 0 5px rgb(13, 227, 13);
+}
+.btnSpan2{
+  margin-left: 5%;
+  padding-left: 2%;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px dodgerblue, 0 0 5px rgb(252, 3, 3);
 }
 
