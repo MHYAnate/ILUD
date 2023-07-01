@@ -15,10 +15,6 @@ export default function Home() {
         <div>
           <Carousel items={items} />
         </div>
-     
-      
-     
-      
     </>
   )
 }
