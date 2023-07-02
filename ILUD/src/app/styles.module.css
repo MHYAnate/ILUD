@@ -1,0 +1,68 @@
+.header{
+  display: flex;
+  width: 100vw;
+  height: 7vh;
+  border-bottom: 1px solid silver;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1vh;
+}
+
+.btnCard{
+  margin-top: 2vh;
+  width:inherit;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  box-shadow: 0 2px 4px 0 black, 0 6px 20px 0 black;
+}
+
+.btn1{
+  width: 45%;
+  height: 60%;
+  text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
+  font-weight: bolder;
+  font-size: 2em;
+  color: black;
+  background-color: gold;
+  box-shadow: 0 4px 4px 0 gold, 0 6px 0px 0 gold;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-right: 1px solid silver;
+  margin-right: 1px;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn2{
+  width: 45%;
+  height: 60%;
+  text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
+  font-weight: bolder;
+  font-size: 2em;
+  color: black;
+  background-color: gold;
+  box-shadow: 0 4px 4px 0 gold, 0 6px 0px 0 gold;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+  border-left: 1px solid silver;
+  margin-left: 1px;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer{
+  width:100vw;
+  height: 7vh;
+  border-top: 1px solid silver;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 1.5%;
+}
+.svg{
+  width: 1.3em;
+  height: 1.3em;
+}
