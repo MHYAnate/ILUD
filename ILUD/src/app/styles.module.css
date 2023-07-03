@@ -1,20 +1,46 @@
 .header{
   display: flex;
   width: 100vw;
-  height: 7vh;
+  height: 10vh;
+  justify-content: space-around;
+  align-items: center;
   border-bottom: 1px solid silver;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 1vh;
 }
+.nav{
+  width: 66vw;
+  height: 7vh;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1%;
+}
+.navLink{
+  display: flex;
+  align-items: center;
+  border: 1px solid silver;
+  border-radius: 3%;
+  height: 5.5vh;
+  width: 30vw;
+  background-color: gold;
+}
+.navLinkSpan{
+  font-weight: bold;
+  text-shadow: 1px 1px 2px white, 0 0 25px black, 0 0 5px white;
+}
 
 .btnCard{
-  margin-top: 2vh;
-  width:inherit;
-  height: 50vh;
+  margin-top: 5vh;
+  width:90vw;
+  height: 30vh;
   display: flex;
   justify-content: center;
   background-color: black;
   box-shadow: 0 2px 4px 0 black, 0 6px 20px 0 black;
+  border-radius: 5%;
 }
 
 .btn1{
@@ -22,7 +48,7 @@
   height: 60%;
   text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.3em;
   color: black;
   background-color: gold;
   box-shadow: 0 4px 4px 0 gold, 0 6px 0px 0 gold;
@@ -41,7 +67,7 @@
   height: 60%;
   text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.3em;
   color: black;
   background-color: gold;
   box-shadow: 0 4px 4px 0 gold, 0 6px 0px 0 gold;
@@ -56,11 +82,43 @@
   align-items: center;
 }
 .footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width:100vw;
-  height: 7vh;
+  height: 10vh;
   border-top: 1px solid silver;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 1.5%;
+  margin-top: 8vh;
+}
+.copyRight{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.8em;
+  height: 5.55vh;
+  box-shadow: 0 1px 1px 0 white, 0 3px 5px 0 silver;
+  padding-left: 1%;
+  padding-right: 3%;
+  width: 30vw;
+  border: 0.3px gold solid;
+  margin-left: 0.3em;
+  border-radius: 3px;
+  color: gold;
+
+}
+.footerIludSpan{
+  margin-left: -0.3em;
+}
+.contactUs{
+  width: 97vw;
+  height: 7.77vh;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding-right: 1%;
 }
 .svg{
   width: 1.3em;
