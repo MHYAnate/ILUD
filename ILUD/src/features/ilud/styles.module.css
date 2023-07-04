@@ -27,7 +27,7 @@
   text-align: center;
 }
 .mix{
-  margin-left: -1vw;
+  margin-left: -1.7vw;
 }
 @media screen and (max-width: 1120px){
   .ilinkupdirect{
@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 620px){
   .mix{
-    margin-left: -5%;
+    margin-left: -5.7%;
   }
   .ilud{
   text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
@@ -58,17 +58,17 @@
 }
 @media screen and (min-width: 420px){
   .mix{
-    margin-left: -5%;
+    margin-left: -5.7%;
   }
 }
 @media screen and (min-width: 520px){
   .mix{
-    margin-left: -3%;
+    margin-left: -3.7%;
   }
 }
 @media screen and (min-width: 620px){
   .mix{
-    margin-left: -2%;
+    margin-left: -2.7%;
   } 
   .ilud{
     text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
@@ -83,16 +83,16 @@
 }
 @media screen and (min-width: 820px){
   .mix{
-    margin-left: -1.5%;
+    margin-left: -2.2%;
   } 
 }
 @media screen and (min-width: 1020px){
   .mix{
-    margin-left: -1.5%;
+    margin-left: -2.2%;
   } 
 }
 @media screen and (min-width: 1400px){
   .mix{
-    margin-left: -1%;
+    margin-left: -1.5%;
   } 
 }
