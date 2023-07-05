@@ -6,6 +6,7 @@
   justify-content: center;
   margin-top: 0.333%;
   justify-content: space-between;
+  background-color: white;
 }
 .imgform{
   width: 30vw;
@@ -13,6 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 .imgcontainer{
  width: 30vw;
@@ -55,15 +57,19 @@
   border-right: 1px solid silver;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   row-gap: 2%;
+  background-color: white;
 }
 .formSpan{
   border-right: 1px solid silver;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: inherit;
+  width: 97%;
   padding-left: 2%;
   font-weight: 500;
   overflow-y: auto;
   font-size: 1em;
+  background-color: silver;
+  
+  margin-left: 1%;
+  margin-right: 0.3em;
 }
 .headsvg{
   display: flex;

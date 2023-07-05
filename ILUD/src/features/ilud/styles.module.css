@@ -7,6 +7,8 @@
   padding-left: 3%;
   padding-right: 3%;
   width: 30vw;
+  padding-top: 1.5%;
+  background-color: silver;
 }
 .ilud{
   text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
@@ -70,6 +72,9 @@
   .mix{
     margin-left: -2.7%;
   } 
+  .cover{
+    padding-top: 0.7%;
+  }
   .ilud{
     text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
     font-size: 0.7em;
@@ -90,6 +95,9 @@
   .mix{
     margin-left: -2.2%;
   } 
+  .cover{
+    padding-top: 0.3%;
+  }
 }
 @media screen and (min-width: 1400px){
   .mix{

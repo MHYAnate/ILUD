@@ -7,6 +7,7 @@
   border-bottom: 1px solid silver;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 1vh;
+  background-color: white;
 }
 .nav{
   width: 66vw;
@@ -89,7 +90,8 @@
   height: 10vh;
   border-top: 1px solid silver;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 8vh;
+  margin-top: 10.9vh;
+  background-color: white;
 }
 .copyRight{
   display: flex;
@@ -98,11 +100,11 @@
   font-weight: bold;
   font-size: 0.8em;
   height: 5.55vh;
-  box-shadow: 0 1px 1px 0 white, 0 3px 5px 0 silver;
+  box-shadow: 0 1px 1px 0 white, 0 3px 5px 0 gold;
   padding-left: 1%;
   padding-right: 3%;
   width: 30vw;
-  border: 0.3px gold solid;
+  
   margin-left: 0.3em;
   border-radius: 3px;
   color: gold;
@@ -114,7 +116,7 @@
 .contactUs{
   width: 97vw;
   height: 7.77vh;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: black;
   display: flex;
   align-items: center;
@@ -131,11 +133,23 @@
   margin-left: 0.3em;
   margin-right: 0.3em;
 }
-.footLink{
-  color: gold;
-
+.footCard{
+  font-size: 0.8em;
+  width: 62vw;
+  height: 5.55vh;
+  box-shadow: 0 1px 1px 0 white, 0 3px 5px 0 gold;
+  font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  background-color: silver;
+  border-radius: 3px;
+}
+.footLink{
+  color: black;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
 }
 .svgCopy{
   width: 1em;
