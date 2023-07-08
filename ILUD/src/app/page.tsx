@@ -4,6 +4,8 @@ import { items } from "@/features/carousel/carouselData";
 import Ilud from "@/features/ilud/ilud";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import AdCarousel from "@/features/addCarousel/adCarousel";
+import { Services } from "@/features/addCarousel/adCarouselData";
 
 export default function Home() {
 	return (
@@ -34,7 +36,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div>
-					<Carousel items={items} />
+					<AdCarousel Services={Services}/>
 				</div>
 				<div className={styles.btnCard}>
 					<button className={styles.btn1}>

@@ -1,0 +1,42 @@
+.parent{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 33vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center;
+  margin-top: 0.333%;
+  justify-content: space-between;
+  background-color: white;
+}
+.titleCard{
+  width: inherit;
+  height: 7vh;
+}
+.titleSpan{
+  font-size: 0.7em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.mainCard{
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+}
+.cardL{
+  width: 60vw;
+  height: inherit;
+}
+.cardS{
+  width: 30vw;
+  height: inherit;
+}
+
+
+.img{
+ width: inherit;
+ height: inherit;
+ border-radius: inherit;
+}
+
