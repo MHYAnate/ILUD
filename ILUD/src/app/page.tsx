@@ -5,7 +5,7 @@ import Ilud from "@/features/ilud/ilud";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import AdCarousel from "@/features/addCarousel/adCarousel";
-import { Services } from "@/features/addCarousel/adCarouselData";
+import { Services } from "@/features/addCarousel/slice";
 
 export default function Home() {
 	return (

@@ -2,6 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { useState, useEffect } from 'react';
+import { Services } from './adCarouselData'
 
 export interface AdCarouselState {
   value: number
@@ -10,7 +11,7 @@ export interface AdCarouselState {
 const random = Math.floor(Math.random()*8);
 
 const initialState: AdCarouselState = {
-  value: random,
+  value: 0,
 }
 
 export const adCarouselSlice = createSlice({
@@ -18,34 +19,14 @@ export const adCarouselSlice = createSlice({
   initialState,
   reducers: {
     increment1: (state) => {
-     state.value + 1
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      increment1();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
+      state.value >= 0 && state.value < Services.length? state.value += 1 : state.value ++;
+     
+      }
     },
-
-    increment2: (state) => {
-      state.value + 1
- 
-   useEffect(() => {
-     const interval = setInterval(() => {
-       increment1();
-     }, 5500);
- 
-     return () => clearInterval(interval);
-   }, []);
-    },
-  },
 })
 
 
 // Action creators are generated for each case reducer function
-export const { increment1, increment2} = adCarouselSlice.actions
+export const { increment1} = adCarouselSlice.actions
 
 export default adCarouselSlice.reducer

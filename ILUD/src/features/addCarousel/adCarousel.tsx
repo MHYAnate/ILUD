@@ -4,8 +4,10 @@ import Link from "next/link";
 import React from 'react'
 import type { RootState } from '../../app/store'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment2, increment1 } from './adCarouselSlice'
+import { increment1 } from './adCarouselSlice'
+import { increment2 } from './adCarouselSlice1'
 import { number } from "zod";
+import { Services } from "./adCarouselData";
 
 interface CarouselProps {
 	Services: {
@@ -20,56 +22,36 @@ interface CarouselProps {
 	}[]; // An array of services to display in the carousel,
 }
 
+
 const AdCarousel: React.FC<CarouselProps>   = ({Services}) => {
-
-
-	const [activeIndex, setActiveIndex] = useState(0);
-	
   
-	const handleNexts = () => {
-		setActiveIndex((prevIndex) =>
-			prevIndex === Services.length - 1 ? 0 : prevIndex + 1
-		);
-	};
+	const activeIndex = useSelector((state: RootState) => state.carousel.value)
+	const inneractiveIndex = useSelector((state: RootState) => state.carousel1.value)
 
-	const handlePrevs = () => {
-		setActiveIndex((prevIndex) =>
-			prevIndex === 0 ? Services.length - 1 : prevIndex - 1
-		);
-	};
+  const dispatch = useDispatch()
+	const dispatch1 = useDispatch()
+
+	
+	useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch(increment1());
+    }, 22000);
+
+    return () => clearInterval(interval);
+  },[]);
 
 	useEffect(() => {
-		const interval = setInterval(() => {
-			handleNexts();
-		}, 22000);
+    const interval = setInterval(() => {
+      dispatch1(increment2());
+    }, 1500);
 
-		return () => clearInterval(interval);
-	},[]);
+    return () => clearInterval(interval);
+  },[]);
 
- const inner = Services[activeIndex].services;
- 
-const [activeIndexInner, setActiveIndexInner] = useState(0);
 
-const state = inner[activeIndexInner];
-	const handleNext = () => {
-		setActiveIndexInner((prevIndex) =>
-			prevIndex === inner.length - 1 ? 0 : prevIndex + 1
-		);
-	};
 
-	const handlePrev = () => {
-		setActiveIndexInner((prevIndex) =>
-			prevIndex === 0 ? inner.length - 1 : prevIndex - 1
-		);
-	};
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			handleNext();
-		}, 1500);
-
-		return () => clearInterval(interval);
-	});
+	
 	return (
 		<div className={styles.parent}>
 			<div className={styles.titleCard}>
@@ -80,7 +62,7 @@ const state = inner[activeIndexInner];
 				<img className={styles.img} src={Services[activeIndex].src}/>
 				</div>
 				<div className={styles.cardS} >
-					<img className={styles.img} src={state.src}/>
+					<img className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
 				</div>
 			
       </div>
