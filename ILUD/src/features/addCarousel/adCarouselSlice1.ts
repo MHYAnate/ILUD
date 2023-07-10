@@ -11,8 +11,6 @@ export interface AdCarouselState {
 }
 
 
-
-
 const initialState: AdCarouselState = {
   value: 0,
 }
@@ -22,9 +20,7 @@ export const adCarouselSlice1 = createSlice({
   initialState,
   reducers: {
     increment2: (state) => {
-     
-      state.value >= 0 && state.value < Services[length].services.length? state.value += 1 : state.value == 0;
-  
+      state.value === Services[length].services.length - 1 ?state.value = 0 :state.value += 1;
     },
   },
 })

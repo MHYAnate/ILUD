@@ -26,7 +26,7 @@ interface CarouselProps {
 const AdCarousel: React.FC<CarouselProps>   = ({Services}) => {
   
 	const activeIndex = useSelector((state: RootState) => state.carousel.value)
-	const inneractiveIndex = useSelector((state: RootState) => state.carousel1.value)
+	
 
   const dispatch = useDispatch()
 	const dispatch1 = useDispatch()
@@ -40,18 +40,36 @@ const AdCarousel: React.FC<CarouselProps>   = ({Services}) => {
     return () => clearInterval(interval);
   },[]);
 
+	const [inneractiveIndex, setinnerActiveIndex] = useState(0);
+  
+	const handleNextinner = () => {
+		setinnerActiveIndex((prevIndex) =>
+			prevIndex === Services[activeIndex].services.length - 1 ? prevIndex = 0 : prevIndex += 1
+		);
+	};
+
+	const handlePrevinner = () => {
+		setinnerActiveIndex((prevIndex) =>
+		prevIndex === Services[activeIndex].services.length - 1 ? prevIndex = 0 : prevIndex += 1
+		);
+	};
+
 	useEffect(() => {
-    const interval = setInterval(() => {
-      dispatch1(increment2());
-    }, 1500);
+		const interval = setInterval(() => {
+			try{
+				handleNextinner();
+			}catch(error){
+        
+			}
+			
+		}, 1500);
 
-    return () => clearInterval(interval);
-  },[]);
-
-
+		return () => clearInterval(interval);
+	}, [Services[activeIndex].services[inneractiveIndex]]);
 
 
 	
+
 	return (
 		<div className={styles.parent}>
 			<div className={styles.titleCard}>

@@ -19,8 +19,8 @@ export const adCarouselSlice = createSlice({
   initialState,
   reducers: {
     increment1: (state) => {
-      state.value >= 0 && state.value < Services.length? state.value += 1 : state.value ++;
-     
+       
+      state.value === Services.length - 1 ?state.value = 0 :state.value += 1;
       }
     },
 })
