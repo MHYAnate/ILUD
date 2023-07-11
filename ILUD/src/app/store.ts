@@ -1,15 +1,12 @@
 "use client"
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from '@/features/counter/counterSlice'
-import carouselReducer from '@/features/addCarousel/adCarouselSlice'
-import carousel1Reducer from '@/features/addCarousel/adCarouselSlice1'
+
 
 
 export const store = configureStore({
   reducer: {
     counter:counterReducer,
-    carousel: carouselReducer,
-    carousel1:carousel1Reducer,
   },
 })
 

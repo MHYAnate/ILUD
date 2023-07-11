@@ -1,5 +1,4 @@
 export const Services = [
-	
 	{
     "category": "Personal Services",
 		"src": "/service/personal.jpg",

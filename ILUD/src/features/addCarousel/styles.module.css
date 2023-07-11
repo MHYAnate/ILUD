@@ -4,35 +4,65 @@
   width: 100vw;
   height: 33vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  justify-content: center;
   margin-top: 0.333%;
-  justify-content: space-between;
   background-color: white;
 }
 .titleCard{
   width: inherit;
   height: 7vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  background-color: gold;
 }
 .titleSpan{
   font-size: 0.7em;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-}
-.mainCard{
-  width: 100vw;
-  height: 20vh;
   display: flex;
-}
-.cardL{
-  width: 60vw;
-  height: inherit;
-}
-.cardS{
-  width: 30vw;
-  height: inherit;
+  justify-content: space-between;
+  text-align: center;
 }
 
+.mainCard{
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.cardL{
+  width: 47vw;
+  height: 22vh;
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(243 244 246);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.cardS{
+  width: 47vw;
+  height: 22vh;
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(243 244 246);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.imgCover{
+  width: 20vw;
+  height: 13vh;
+  border-radius: 5px;
+}
 
 .img{
  width: inherit;

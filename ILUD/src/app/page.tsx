@@ -1,11 +1,9 @@
 "use client";
-import Carousel from "@/features/carousel/carousel";
-import { items } from "@/features/carousel/carouselData";
 import Ilud from "@/features/ilud/ilud";
 import Link from "next/link";
 import styles from "./styles.module.css";
-import AdCarousel from "@/features/addCarousel/adCarousel";
-import { Services } from "@/features/addCarousel/slice";
+import { Services } from "@/features/addCarousel/data";
+import Ad from "@/features/addCarousel/ad";
 
 export default function Home() {
 	return (
@@ -36,7 +34,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div>
-					<AdCarousel Services={Services}/>
+					<Ad Services={Services} />
 				</div>
 				<div className={styles.btnCard}>
 					<button className={styles.btn1}>
