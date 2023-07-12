@@ -37,14 +37,10 @@ const Ad: React.FC<CarouselProps>   = ({Services}) => {
 
   const [inneractiveIndex, innersetActiveIndex] = useState(0);
   
-	const inhandleNext = () => {
-		
+	const inhandleNext = () => {	
 		innersetActiveIndex((prevIndex) =>
-		   prevIndex = (prevIndex + 1) % Services[activeIndex].services.length
+			 prevIndex === Services[activeIndex].services.length - 1 ? 0 : prevIndex + 1
 		);
-	    
-				Services[activeIndex].services.length===0
-		
 	};
 
 	useEffect(() => {
