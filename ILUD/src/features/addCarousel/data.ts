@@ -165,6 +165,12 @@ export const Services = [
 				"src": "/service/mobile_repair.jpg",
 				"link": "",
 			},
+			{
+				"id": 13,
+				"name": "AC,Fridge&Cooker",
+				"src": "/service/Ac, fridge and cooker.jpg",
+				"link": "",
+			},
     ],
   },
   {
