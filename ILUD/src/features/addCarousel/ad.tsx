@@ -38,9 +38,13 @@ const Ad: React.FC<CarouselProps>   = ({Services}) => {
   const [inneractiveIndex, innersetActiveIndex] = useState(0);
   
 	const inhandleNext = () => {
+		try {
 		innersetActiveIndex((prevIndex) =>
 		   prevIndex = (prevIndex + 1) % Services[activeIndex].services.length
 		);
+	    }catch(error){
+				Services[activeIndex].services.length==0
+			}
 	};
 
 	useEffect(() => {
@@ -54,20 +58,22 @@ const Ad: React.FC<CarouselProps>   = ({Services}) => {
 	return (
 		<div className={styles.parent}>
 			<div className={styles.titleCard}>
-				<span>Instantly Link Up Directly</span>
-      </div>
+				<div className={styles.bckgrnd}>
+				  <span className={styles.topSpan}>Instantly Link Up Directly to</span>
+        </div>
+			</div>
       <div className={styles.mainCard}>
 				<div className={styles.cardL} >
 					<div>
 					  <span className={styles.titleSpan}>{Services[activeIndex].category}</span>
 					</div>
-          <div className={styles.imgCover}>
+          <div className={styles.imgCover1}>
 				    <img className={styles.img} src={Services[activeIndex].src}/>
           </div>
 				</div>
 				<div className={styles.cardS} >
 					<div >
-						<span className={styles.titleSpan}>{Services[activeIndex].services[inneractiveIndex].name}</span>
+						<span className={styles.titleSpan}>{Services[activeIndex].services[inneractiveIndex].name} Services</span>
 					</div>
 					<div className={styles.imgCover}>
 					  <img className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>

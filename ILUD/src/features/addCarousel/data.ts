@@ -1,6 +1,6 @@
 export const Services = [
 	{
-    "category": "Personal Services",
+    "category": "Personal",
 		"src": "/service/personal.jpg",
     "services": [
 			{
@@ -90,7 +90,7 @@ export const Services = [
     ],
   },
   {
-    "category": "Maintenance Services",
+    "category": "Maintenance",
 		"src": "/service/maintenance.jpg",
     "services": [
 			{
@@ -168,7 +168,7 @@ export const Services = [
     ],
   },
   {
-    "category": "Automotive Services",
+    "category": "Automotive",
 		"src": "/service/automotive.jpg",
     "services": [
 			{
