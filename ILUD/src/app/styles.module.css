@@ -26,7 +26,7 @@
   border-radius: 3%;
   height: 5.5vh;
   width: 30vw;
-  background-color: gold;
+  background-color: rgb(243 244 246);
 }
 .navLinkSpan{
   font-weight: bold;
@@ -35,24 +35,24 @@
 
 .btnCard{
   margin-top: 5vh;
-  width:90vw;
+  width:97vw;
   height: 30vh;
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: rgb(243 244 246);
   box-shadow: 0 2px 4px 0 black, 0 6px 20px 0 black;
   border-radius: 5%;
 }
 
 .btn1{
   width: 45%;
-  height: 60%;
-  text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
+  height: 70%;
+  text-shadow: 1px 1px 2px white, 0 0 25px rgb(243 244 246), 0 0 5px white;
   font-weight: bolder;
   font-size: 1.3em;
   color: black;
-  background-color: gold;
-  box-shadow: 0 4px 4px 0 gold, 0 6px 0px 0 gold;
+  background-color: silver;
+  box-shadow: 0 4px 4px 0 white, 0 6px 0px 0 rgb(243 244 246);
   border-top-left-radius: 15%;
   border-bottom-left-radius: 15%;
   border-right: 1px solid silver;
@@ -61,17 +61,19 @@
   padding-top: 0.5em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding-bottom:  5.55%;
 }
 .btn2{
   width: 45%;
-  height: 60%;
-  text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
+  height: 70%;
+  text-shadow: 1px 1px 2px white, 0 0 25px rgb(243 244 246), 0 0 5px white;
   font-weight: bolder;
   font-size: 1.3em;
   color: black;
-  background-color: gold;
-  box-shadow: 0 4px 4px 0 gold, 0 6px 0px 0 gold;
+  background-color: silver;
+  box-shadow: 0 4px 4px 0 white, 0 6px 0px 0 rgb(243 244 246);
   border-top-right-radius: 15%;
   border-bottom-right-radius: 15%;
   border-left: 1px solid silver;
@@ -80,7 +82,9 @@
   padding-top: 0.5em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding-bottom: 5.55%;
 }
 .footer{
   display: flex;
@@ -106,7 +110,7 @@
   
   margin-left: 0.3em;
   border-radius: 3px;
-  color: gold;
+  color:white;
 }
 .footerIludSpan{
   margin-left: -0.3em;
@@ -135,15 +139,14 @@
   font-size: 0.8em;
   width: 62vw;
   height: 5.55vh;
-  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: black;
+  background-color: silver;
   border-radius: 3px;
 }
 .footLink{
-  color:gold;
+  color:black;
   display: flex;
   align-items: center;
 }

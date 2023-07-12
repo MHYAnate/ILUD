@@ -38,30 +38,24 @@ const Ad: React.FC<CarouselProps>   = ({Services}) => {
   const [inneractiveIndex, innersetActiveIndex] = useState(0);
   
 	const inhandleNext = () => {
-		try {
+		
 		innersetActiveIndex((prevIndex) =>
 		   prevIndex = (prevIndex + 1) % Services[activeIndex].services.length
 		);
-	    }catch(error){
+	    
 				Services[activeIndex].services.length===0
-			}
+		
 	};
 
 	useEffect(() => {
-		try{
+	
 		const interval = setInterval(() => {
 			inhandleNext();
 		}, 1500);
 
 		return () => clearInterval(interval);
-	}catch(error){
-		const interval = setInterval(() => {
-			inhandleNext();
-		}, 1500);
 
-		return () => clearInterval(interval);
-	}
-	}, [Services[activeIndex].services.length]);
+	}, [Services, activeIndex]);
 
 	return (
 		<div className={styles.parent}>

@@ -7,8 +7,8 @@
   padding-left: 3%;
   padding-right: 3%;
   width: 30vw;
-  padding-top: 0.5%;
-  background-color: white;
+  padding-top: 1.2%;
+  background-color: silver;
 }
 .ilud{
   text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
@@ -24,7 +24,7 @@
   text-shadow: 1px 1px 2px white, 0 0 25px black, 0 0 5px white;
   font-size: 0.7em;
   font-weight: bold;
-  background-color: gold;
+  background-color: white;
   width: 25vw;
   text-align: center;
 }
@@ -36,7 +36,7 @@
     text-shadow: 1px 1px 2px white, 0 0 25px black, 0 0 5px white;
     font-size: 0.544em;
     font-weight: bold;
-    background-color: gold;
+    background-color: white;
     width: 25vw;
     text-align: center;
   }

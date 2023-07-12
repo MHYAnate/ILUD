@@ -1,6 +1,7 @@
 .parent{
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 33vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -18,9 +19,10 @@
   background-color: white;
 }
 .bckgrnd{
- width: 98vw;
+ width: 97vw;
  height: 85%;
- border-radius: 5px;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
  background-color: black;
 }
 .topSpan{
@@ -41,7 +43,7 @@
 }
 
 .mainCard{
-  width: 100vw;
+  width: 97vw;
   height: 25vh;
   display: flex;
   justify-content: center;
