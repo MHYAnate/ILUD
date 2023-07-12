@@ -15,11 +15,11 @@
   align-items: center;
   text-align: center;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-  background-color: gold;
+  background-color: white;
 }
 .bckgrnd{
- width: 85vw;
- height: 80%;
+ width: 98vw;
+ height: 85%;
  border-radius: 5px;
  background-color: black;
 }
@@ -27,7 +27,7 @@
   color: white;
   font-size: 1em;
   font-weight: bold;
-  text-shadow: 1px 1px 2px gold, 0 0 25px gold, 0 0 5px white;
+ 
 
 }
 .titleSpan{
@@ -74,14 +74,14 @@
 }
 .imgCover1{
   width: 37vw;
-  height: 16vh;
+  height: 17vh;
   border-radius: 5px;
 }
 .imgCover{
-  width: 20vw;
-  height: 13vh;
+  width: 37vw;
+  height: 17vh;
   border-radius: 5px;
-  padding-bottom: 10%;
+
 }
 
 .img{

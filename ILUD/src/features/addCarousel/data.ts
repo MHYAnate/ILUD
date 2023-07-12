@@ -161,7 +161,7 @@ export const Services = [
 			},
 			{
 				"id": 12,
-				"name": "Mobile phone repair",
+				"name": "Phone repair",
 				"src": "/service/mobile_repair.jpg",
 				"link": "",
 			},

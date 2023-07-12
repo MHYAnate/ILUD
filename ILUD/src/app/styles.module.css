@@ -100,7 +100,6 @@
   font-weight: bold;
   font-size: 0.8em;
   height: 5.55vh;
-  box-shadow: 0 1px 1px 0 white, 0 3px 5px 0 gold;
   padding-left: 1%;
   padding-right: 3%;
   width: 30vw;
@@ -108,7 +107,6 @@
   margin-left: 0.3em;
   border-radius: 3px;
   color: gold;
-
 }
 .footerIludSpan{
   margin-left: -0.3em;
@@ -137,22 +135,25 @@
   font-size: 0.8em;
   width: 62vw;
   height: 5.55vh;
-  box-shadow: 0 1px 1px 0 white, 0 3px 5px 0 gold;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: silver;
+  background-color: black;
   border-radius: 3px;
 }
 .footLink{
-  color: black;
+  color:gold;
   display: flex;
   align-items: center;
-  text-shadow: 1px 1px 2px white, 0 0 25px gold, 0 0 5px white;
 }
 .svgCopy{
   width: 1em;
   height: 1em;
   margin-right: .3em;
+}
+.ilud{
+  color: white;
+  margin-left: 3%;
+  text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
 }

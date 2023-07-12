@@ -43,29 +43,37 @@ const Ad: React.FC<CarouselProps>   = ({Services}) => {
 		   prevIndex = (prevIndex + 1) % Services[activeIndex].services.length
 		);
 	    }catch(error){
-				Services[activeIndex].services.length==0
+				Services[activeIndex].services.length===0
 			}
 	};
 
 	useEffect(() => {
+		try{
 		const interval = setInterval(() => {
 			inhandleNext();
 		}, 1500);
 
 		return () => clearInterval(interval);
+	}catch(error){
+		const interval = setInterval(() => {
+			inhandleNext();
+		}, 1500);
+
+		return () => clearInterval(interval);
+	}
 	}, [Services[activeIndex].services.length]);
 
 	return (
 		<div className={styles.parent}>
 			<div className={styles.titleCard}>
 				<div className={styles.bckgrnd}>
-				  <span className={styles.topSpan}>Instantly Link Up Directly to</span>
+				  <span className={styles.topSpan}>Instant Linking Up Directory </span>
         </div>
 			</div>
       <div className={styles.mainCard}>
 				<div className={styles.cardL} >
 					<div>
-					  <span className={styles.titleSpan}>{Services[activeIndex].category}</span>
+					  <span className={styles.titleSpan}> {Services[activeIndex].category}</span>
 					</div>
           <div className={styles.imgCover1}>
 				    <img className={styles.img} src={Services[activeIndex].src}/>
