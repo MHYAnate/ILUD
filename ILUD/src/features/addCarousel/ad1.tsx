@@ -38,14 +38,6 @@ const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
     return 1400;
   }, [activeIndex, Services]);
 
-  const outImg = useMemo(()=>{
-    return Services[activeIndex].src;
-  },[activeIndex, Services]);
-
-  const cat = useMemo(()=>{
-    return Services[activeIndex].category;
-  },[activeIndex, Services]);
-
   const serviceImage = useMemo(() => {
     return Services[activeIndex].services[inneractiveIndex].src;
   }, [activeIndex, inneractiveIndex, Services]);
@@ -65,7 +57,7 @@ const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       inhandleNext();
-    }, inIntervalTime,[outImg,cat]);
+    }, inIntervalTime);
 
     return () => clearInterval(interval);
   }, [inIntervalTime,[serviceTitle,serviceImage]]);
