@@ -87,6 +87,12 @@ export const Services = [
 				"src": "/service/barbing.jpg",
 				"link": "",
       },
+			{
+        "id": 15,
+				"name":"Camera",
+				"src": "/service/camera.jpg",
+				"link": "",
+      },
     ],
   },
   {

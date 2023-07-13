@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import styles from "./styles.module.css";
 import React from 'react'
 
@@ -16,7 +16,8 @@ interface CarouselProps {
 }
 
 const Ad: React.FC<CarouselProps>   = ({Services}) => {
-  
+	
+
 	
   const [activeIndex, setActiveIndex] = useState(0);
   
@@ -26,11 +27,11 @@ const Ad: React.FC<CarouselProps>   = ({Services}) => {
 		);
 	};
 
-
+  
 	useEffect(() => {
 		const interval = setInterval(() => {
 			handleNext();
-		}, 21000);
+		}, 1455.5*Services[activeIndex].services.length-1);
 
 		return () => clearInterval(interval);
 	}, []);
@@ -47,11 +48,11 @@ const Ad: React.FC<CarouselProps>   = ({Services}) => {
 	
 		const interval = setInterval(() => {
 			inhandleNext();
-		}, 1500);
+		}, 1400);
 
 		return () => clearInterval(interval);
 
-	}, [Services, activeIndex]);
+	}, [Services[activeIndex].services[inneractiveIndex].name]);
 
 	return (
 		<div className={styles.parent}>

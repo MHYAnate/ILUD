@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./styles.module.css";
 import { Services } from "@/features/addCarousel/data";
 import Ad from "@/features/addCarousel/ad";
+import InCarousel from "@/features/addCarousel/ad1";
 
 export default function Home() {
 	return (
@@ -34,7 +35,8 @@ export default function Home() {
 					</div>
 				</div>
 				<div>
-					<Ad Services={Services} />
+					<InCarousel Services={Services}/>
+					{/* <Ad Services={Services} /> */}
 				</div>
 				<div className={styles.btnCard}>
 					<button className={styles.btn1}>
