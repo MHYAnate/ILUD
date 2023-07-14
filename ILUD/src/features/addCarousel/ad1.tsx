@@ -31,11 +31,11 @@ const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
   };
 
   const intervalTime = useMemo(() => {
-    return 1455.5 * Services[activeIndex].services.length - 1;
+    return 2455.5 * Services[activeIndex].services.length - 1;
   }, [activeIndex, Services]);
 
   const inIntervalTime = useMemo(() => {
-    return 1400;
+    return 2400;
   }, [activeIndex, Services]);
 
   const serviceImage = useMemo(() => {
@@ -75,7 +75,7 @@ const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
 					  <span className={styles.titleSpan}> {Services[activeIndex].category}</span>
 					</div>
           <div className={styles.imgCover1}>
-				    <img className={styles.img} src={Services[activeIndex].src}/>
+				    <img className={styles.imgL} src={Services[activeIndex].src}/>
           </div>
 				</div>
 				<div className={styles.cardS} >
@@ -83,7 +83,7 @@ const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
 						<span className={styles.titleSpan}>{Services[activeIndex].services[inneractiveIndex].name} Services</span>
 					</div>
 					<div className={styles.imgCover}>
-					  <img className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+					  <img className={styles.imgS} src={Services[activeIndex].services[inneractiveIndex].src}/>
 					</div>
 				</div>
 			
