@@ -7,37 +7,35 @@ import ContactTab from './contact';
 
 export default function TabContainer() {
   const [isPending, startTransition] = useTransition();
-  const [tab, setTab] = useState('about');
+  const [tab, setTab] = useState('');
 
   function selectTab(nextTab:string) {
     startTransition(() => {
       setTab(nextTab);      
     });
-  }
+  } ;
 
   return (
     <>
       <TabButton
-        isActive={tab === 'about'}
-        onClick={() => selectTab('about')}
+        onClick={() =>tab === 'about'  ? selectTab(''):selectTab('about')}
       >
         About
       </TabButton>
       <TabButton
-        isActive={tab === 'posts'}
-        onClick={() => selectTab('posts')}
+        onClick={() =>tab === 'posts'  ? selectTab(''):selectTab('posts')}
       >
         Posts (slow)
       </TabButton>
       <TabButton
-        isActive={tab === 'contact'}
-        onClick={() => selectTab('contact')}
+        onClick={() =>tab === 'contact'  ? selectTab(''):selectTab('contact')}
       >
         Contact
       </TabButton>
       <hr />
+      
       {tab === 'about' && <AboutTab />}
-      {tab === 'posts' && <PostsTab />}
+      {tab == 'posts' && <PostsTab />}
       {tab === 'contact' && <ContactTab />}
     </>
   );

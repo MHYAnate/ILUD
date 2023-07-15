@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import { Services } from "@/features/addCarousel/data";
 import Ad from "@/features/addCarousel/ad";
 import InCarousel from "@/features/addCarousel/ad1";
+import TabContainer from "@/features/reacttest/main";
 
 export default function Home() {
 	return (
@@ -35,6 +36,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div>
+					{/* <TabContainer/> */}
 					<InCarousel Services={Services}/>
 					{/* <Ad Services={Services} /> */}
 				</div>

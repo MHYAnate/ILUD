@@ -34,25 +34,25 @@
 }
 
 .btnCard{
-  margin-top: 5vh;
-  width:97vw;
-  height: 30vh;
+  margin-top: 1vh;
+  width:96vw;
+  height: 45vh;
   display: flex;
   justify-content: center;
-  background-color: rgb(243 244 246);
-  box-shadow: 0 2px 4px 0 black, 0 6px 20px 0 black;
-  border-radius: 5%;
+  background-color: black;
+
+
 }
 
 .btn1{
   width: 45%;
-  height: 70%;
+  height: 30%;
   text-shadow: 1px 1px 2px white, 0 0 25px rgb(243 244 246), 0 0 5px white;
   font-weight: bolder;
   font-size: 1.3em;
   color: black;
-  background-color: silver;
-  box-shadow: 0 4px 4px 0 white, 0 6px 0px 0 rgb(243 244 246);
+  background-color: rgb(243 244 246);
+ 
   border-top-left-radius: 15%;
   border-bottom-left-radius: 15%;
   border-right: 1px solid silver;
@@ -67,13 +67,13 @@
 }
 .btn2{
   width: 45%;
-  height: 70%;
+  height: 30%;
   text-shadow: 1px 1px 2px white, 0 0 25px rgb(243 244 246), 0 0 5px white;
   font-weight: bolder;
   font-size: 1.3em;
   color: black;
-  background-color: silver;
-  box-shadow: 0 4px 4px 0 white, 0 6px 0px 0 rgb(243 244 246);
+  background-color: rgb(243 244 246);
+  
   border-top-right-radius: 15%;
   border-bottom-right-radius: 15%;
   border-left: 1px solid silver;
@@ -94,7 +94,7 @@
   height: 10vh;
   border-top: 1px solid silver;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 10.9vh;
+ margin-top: 1vh;
   background-color: white;
 }
 .copyRight{
@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: silver;
+  background-color:  rgb(243 244 246);
   border-radius: 3px;
 }
 .footLink{

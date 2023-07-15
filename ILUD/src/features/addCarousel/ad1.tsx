@@ -83,7 +83,24 @@ const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
 						<span className={styles.titleSpan}>{Services[activeIndex].services[inneractiveIndex].name} Services</span>
 					</div>
 					<div className={styles.imgCover}>
-					  <img className={styles.imgS} src={Services[activeIndex].services[inneractiveIndex].src}/>
+            <div className={styles.front}>
+              <img object-fit= 'cover'  className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+            </div>
+            <div className={styles.back}>
+					    <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+            </div>
+            <div className={styles.right}>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+            </div>
+            <div className={styles.left}>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+            </div>
+            <div className={styles.top}>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+            </div>
+            <div className={styles.bottom}>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+            </div>
 					</div>
 				</div>
 			
