@@ -34,27 +34,26 @@
 }
 
 .btnCard{
-  margin-top: 1vh;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
   width:96vw;
-  height: 45vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   background-color: black;
-
-
 }
 
 .btn1{
   width: 45%;
-  height: 30%;
+  height: 40%;
   text-shadow: 1px 1px 2px white, 0 0 25px rgb(243 244 246), 0 0 5px white;
   font-weight: bolder;
   font-size: 1.3em;
   color: black;
   background-color: rgb(243 244 246);
- 
-  border-top-left-radius: 15%;
-  border-bottom-left-radius: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
   border-right: 1px solid silver;
   margin-right: 1px;
   margin-top: 1em;
@@ -67,15 +66,15 @@
 }
 .btn2{
   width: 45%;
-  height: 30%;
+  height: 40%;
   text-shadow: 1px 1px 2px white, 0 0 25px rgb(243 244 246), 0 0 5px white;
   font-weight: bolder;
   font-size: 1.3em;
   color: black;
   background-color: rgb(243 244 246);
-  
-  border-top-right-radius: 15%;
-  border-bottom-right-radius: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
   border-left: 1px solid silver;
   margin-left: 1px;
   margin-top: 1em;
@@ -94,7 +93,6 @@
   height: 10vh;
   border-top: 1px solid silver;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- margin-top: 1vh;
   background-color: white;
 }
 .copyRight{
