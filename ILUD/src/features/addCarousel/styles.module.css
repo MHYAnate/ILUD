@@ -58,6 +58,7 @@
   align-items: center;
   background-color: black;
 }
+
 .cardL{
   width: 47vw;
   height: 22vh;
@@ -108,7 +109,7 @@
   display: flex;
   justify-content: center;
   transform-style: preserve-3d;
-  animation: rotate 7s infinite linear;
+  animation: rotate 10s infinite linear;
 }
 
 .img{
