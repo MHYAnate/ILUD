@@ -6,6 +6,8 @@ import { Services } from "@/features/addCarousel/data";
 import Ad from "@/features/addCarousel/ad";
 import InCarousel from "@/features/addCarousel/ad1";
 import TabContainer from "@/features/reacttest/main";
+import Iludfooter from "@/features/iludfooter/iludfooter";
+import UserBtnContainer from "@/features/firstPageLog/userBtn";
 
 export default function Home() {
 	return (
@@ -37,57 +39,27 @@ export default function Home() {
 				</div>
 				<div>
 					{/* <TabContainer/> */}
-					<InCarousel Services={Services}/>
+					<InCarousel Services={Services} />
 					{/* <Ad Services={Services} /> */}
 				</div>
 				<div className={styles.btnCard}>
-					<button className={styles.btn1}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							strokeWidth={1.5}
-							stroke="currentColor"
-							className={styles.svg}
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z"
-							/>
-						</svg>
-						<Link href="">New User</Link>
-					</button>
-					<button className={styles.btn2}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							strokeWidth={1.5}
-							stroke="currentColor"
-							className={styles.svg}
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-							/>
-						</svg>
-						<Link href="">Existing User</Link>
-					</button>
+				  <UserBtnContainer/>
 				</div>
 				<div className={styles.footer}>
 					<div className={styles.contactUs}>
 						<div className={styles.copyRight}>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="white"
-								className={styles.svgCopy}
-								viewBox="0 0 512 512"
-							>
-								<path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm117.134 346.753c-1.592 1.867-39.776 45.731-109.851 45.731-84.692 0-144.484-63.26-144.484-145.567 0-81.303 62.004-143.401 143.762-143.401 66.957 0 101.965 37.315 103.422 38.904a12 12 0 0 1 1.238 14.623l-22.38 34.655c-4.049 6.267-12.774 7.351-18.234 2.295-.233-.214-26.529-23.88-61.88-23.88-46.116 0-73.916 33.575-73.916 76.082 0 39.602 25.514 79.692 74.277 79.692 38.697 0 65.28-28.338 65.544-28.625 5.132-5.565 14.059-5.033 18.508 1.053l24.547 33.572a12.001 12.001 0 0 1-.553 14.866z" />
-							</svg>{" "}
-							2023 <span className={styles.ilud}>ILU<span className={styles.footerIludSpan}>D</span>{" "}</span>
+							<div className={styles.copyDate}>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="white"
+									className={styles.svgCopy}
+									viewBox="0 0 512 512"
+								>
+									<path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm117.134 346.753c-1.592 1.867-39.776 45.731-109.851 45.731-84.692 0-144.484-63.26-144.484-145.567 0-81.303 62.004-143.401 143.762-143.401 66.957 0 101.965 37.315 103.422 38.904a12 12 0 0 1 1.238 14.623l-22.38 34.655c-4.049 6.267-12.774 7.351-18.234 2.295-.233-.214-26.529-23.88-61.88-23.88-46.116 0-73.916 33.575-73.916 76.082 0 39.602 25.514 79.692 74.277 79.692 38.697 0 65.28-28.338 65.544-28.625 5.132-5.565 14.059-5.033 18.508 1.053l24.547 33.572a12.001 12.001 0 0 1-.553 14.866z" />
+								</svg>{" "}
+								2023
+							</div>
+							<Iludfooter/>
 						</div>
 						<Link className={styles.footLink} href="">
 							<div className={styles.footCard}>

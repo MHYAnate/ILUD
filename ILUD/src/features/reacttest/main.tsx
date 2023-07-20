@@ -18,17 +18,17 @@ export default function TabContainer() {
   return (
     <>
       <TabButton
-        onClick={() =>tab === 'about'  ? selectTab(''):selectTab('about')}
+        onClick={() =>tab === 'about' ? selectTab(''):selectTab('about')}
       >
         About
       </TabButton>
       <TabButton
-        onClick={() =>tab === 'posts'  ? selectTab(''):selectTab('posts')}
+        onClick={() =>tab === 'posts' ? selectTab(''):selectTab('posts')}
       >
         Posts (slow)
       </TabButton>
       <TabButton
-        onClick={() =>tab === 'contact'  ? selectTab(''):selectTab('contact')}
+        onClick={() =>tab === 'contact' ? selectTab(''):selectTab('contact')}
       >
         Contact
       </TabButton>

@@ -97,7 +97,7 @@
 }
 .copyRight{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-weight: bold;
   font-size: 0.8em;
@@ -105,14 +105,13 @@
   padding-left: 1%;
   padding-right: 3%;
   width: 30vw;
-  
   margin-left: 0.3em;
   border-radius: 3px;
   color:white;
+  position: relative;
+  perspective: 800px;
 }
-.footerIludSpan{
-  margin-left: -0.3em;
-}
+
 .contactUs{
   width: 97vw;
   height: 7.77vh;
@@ -148,13 +147,15 @@
   display: flex;
   align-items: center;
 }
+
 .svgCopy{
   width: 1em;
   height: 1em;
   margin-right: .3em;
 }
-.ilud{
-  color: white;
-  margin-left: 3%;
-  text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
-}
+
+ .copyDate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }

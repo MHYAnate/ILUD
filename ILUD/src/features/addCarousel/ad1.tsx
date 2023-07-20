@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, memo } from 'react';
 import styles from "./styles.module.css";
 
 interface CarouselProps {
@@ -14,7 +14,7 @@ interface CarouselProps {
   }[];
 }
 
-const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
+const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [inneractiveIndex, innersetActiveIndex] = useState(0);
 
@@ -107,5 +107,5 @@ const InCarousel: React.FC<CarouselProps> = ({ Services }) => {
       </div>
 		</div>
 	);
-};
+});
 export default InCarousel;
