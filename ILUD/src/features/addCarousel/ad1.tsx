@@ -19,8 +19,6 @@ const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [inneractiveIndex, innersetActiveIndex] = useState(0);
 
-  const [style, setStyle] = useState('');
-
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === Services.length - 1 ? 0 : prevIndex + 1

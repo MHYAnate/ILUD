@@ -18,6 +18,7 @@ interface CarouselProps {
 
 
 const AboutTab: React.FC<CarouselProps> = memo(({ Services }) => {
+  
 	let items = [];
 
 	for (let i = 1; i < Services.length - 1; i++) {
@@ -25,9 +26,17 @@ const AboutTab: React.FC<CarouselProps> = memo(({ Services }) => {
 	}
 
 	return <ul className={styles.lineContainer}>{items}</ul>;
+
 });
 
 const SlowPost: React.FC<CarouselProps> = ({ Services }) => {
+
+  let startTime = performance.now();
+
+	while (performance.now() - startTime < 1) {
+		// Do nothing for 1ms per item to emulate extremely slow code
+	}
+
 	function renderServices(services: any) {
 		return services.map((service: any) => (
 			<div className={styles.renderCover} key={service.name}>
@@ -37,16 +46,10 @@ const SlowPost: React.FC<CarouselProps> = ({ Services }) => {
 		));
 	}
 
-	let startTime = performance.now();
-
-	while (performance.now() - startTime < 1) {
-		// Do nothing for 1ms per item to emulate extremely slow code
-	}
-
 	return (
 		<>
 			{Services.map((service) => (
-        
+
 				<li className={styles.line} key={service.id}>
 					<div className={styles.maped} key={service.id}>
 						{service.category}
