@@ -100,6 +100,15 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
 
+ .flip{
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  padding-bottom: inherit;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: rotate 1.5s ease forwards;
+ }
+
 .imgCover{
   width: 37vh;
   height: 17vh;

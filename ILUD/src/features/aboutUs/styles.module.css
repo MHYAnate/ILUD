@@ -1,0 +1,29 @@
+.lineContainer{
+ width: 97dvw;
+ height: 70svh;
+ top: 10svh;
+ position: fixed;
+ background-color: silver;
+ z-index: 3;
+ overflow-y: auto;
+}
+
+.click{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid silver;
+  border-radius: 3%;
+  height: 5.5vh;
+  width: 30vw;
+  background-color: rgb(243 244 246);
+}
+.renderCover{
+  display: flex;
+  align-items: center;
+}
+.img{
+  width: 20dvw;
+  height: 10svh;
+  border-radius: 50%;
+}

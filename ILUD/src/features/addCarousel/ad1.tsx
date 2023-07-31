@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 
 interface CarouselProps {
   Services: {
+    id:number;
     category: string;
     src: string;
     services: {
@@ -18,6 +19,8 @@ const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [inneractiveIndex, innersetActiveIndex] = useState(0);
 
+  const [style, setStyle] = useState('');
+
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === Services.length - 1 ? 0 : prevIndex + 1
@@ -29,10 +32,11 @@ const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
       prevIndex === Services[activeIndex].services.length - 1 ? 0 : prevIndex + 1
     );
   };
-
+  
   const intervalTime = useMemo(() => {
     return 1555 * Services[activeIndex].services.length - 1;
   }, [activeIndex, Services]);
+
 
   const inIntervalTime = useMemo(() => {
     return 1500;
@@ -74,7 +78,7 @@ const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					<div>
 					  <span className={styles.titleSpan}> {Services[activeIndex].category}</span>
 					</div>
-          <div className={styles.imgCover1}>
+          <div  className={styles.imgCover1}>
 				    <img className={styles.imgL} src={Services[activeIndex].src}/>
           </div>
 				</div>
