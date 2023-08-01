@@ -1,11 +1,19 @@
 .lineContainer{
- width: 97dvw;
- height: 70svh;
- top: 10svh;
+ width: 98dvw;
+ max-height: 80svh;
+ min-height: 33svh;
+ left: 1dvw;
+ top: 11svh;
  position: fixed;
  background-color: silver;
  z-index: 3;
  overflow-y: auto;
+ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ border-bottom: 1px solid silver;
+ border-left: 1px solid silver;
+ border-right: 1px solid silver;
+ border-bottom-left-radius: 5px;
+ border-bottom-right-radius: 5px;
 }
 
 .click{
@@ -18,12 +26,75 @@
   width: 30vw;
   background-color: rgb(243 244 246);
 }
+.ServiceClick{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid silver;
+  border-radius: 5px;
+  height: 7svh;
+  width: 90dvw;
+  background-color: black;
+  color: white;
+  padding-left: 2dvw;
+}
 .renderCover{
   display: flex;
   align-items: center;
+  margin-left: 10dvw;
+  margin-top: 1svh;
+  margin-bottom: 1svh;
+  font-weight: 500;
+  max-height: 30svh;
+  width: 77dvw;
+  border-bottom: .3px solid white;
+  padding-bottom: 1svh;
 }
 .img{
-  width: 20dvw;
-  height: 10svh;
+  width: 10dvw;
+  height: 5svh;
   border-radius: 50%;
+  margin-right: 1dvw;
+}
+.img1{
+  width: 10dvw;
+  height: 5svh;
+  border-radius: 5%;
+  margin-right: 3dvw;
+}
+.tabBtn{
+  display: flex;
+  align-items: center;
+  padding-top: 0.5svh;
+  font-weight: bold;
+}
+.abtSvg{
+  width: 8dvw;
+  height: 3.5svh;
+}
+.span{
+  margin-right: 0.5dvw;
+  font-size: small;
+}
+.aims{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 2dvw;
+  font-weight: 100;
+  font-size: 0.7em;
+}
+.tabCover{
+  margin-top: 1svh;
+  margin-left: 1dvw;
+  display: flex;
+  flex-direction: column;
+}
+.tabHolder{
+  display: flex;
+  align-items: center;
+  width: 90dvw;
+}
+.tabControl{
+  max-height: 50svh;
+  overflow-y: auto;
 }
