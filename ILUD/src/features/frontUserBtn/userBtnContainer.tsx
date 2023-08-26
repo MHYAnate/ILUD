@@ -16,10 +16,7 @@ export default function UserBtn() {
     });
   } ;
 
-  const [btnVisible, setBtnVisible] = useState(false);
-  const handleToggleBtn = () => {
-		setBtnVisible((prevBtnVisible) => !prevBtnVisible);
-	};
+;
   return (
     <>
       <div className={styles.caseContainer}>
