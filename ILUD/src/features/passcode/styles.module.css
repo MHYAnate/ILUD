@@ -1,0 +1,31 @@
+.passcodeContainer{
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70dvw;
+  height: 7svh;
+}
+.btn{
+  width: fit-content;
+}
+.input{
+  width: 7dvw;
+  height: 4svh;
+  border-radius: 7px;
+  display: flex;
+  padding-left: 3.5%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.svg{
+  width: 10dvw;
+  height: 4svh;
+  color: white;
+  box-shadow: 0 2px 4px 0 black, 0 0.75px 2.5px 0 white;
+  border-radius: 1svh;
+}
+

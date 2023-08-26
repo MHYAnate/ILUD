@@ -1,0 +1,76 @@
+.formContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100svw;
+	padding-top: 2.5dvh;
+	padding-bottom: 2.5dvh;
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 95%;
+}
+
+.input {
+	margin: 1.5svh;
+	color: black;
+	width: 90dvw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  box-shadow: -2px 2px 5px grey;
+}
+
+.error {
+	color: red;
+	margin-left: 10px;
+}
+
+.passWordContainer {
+	display: flex;
+	width: 89dvw;
+	justify-content: center;
+}
+
+.passWord {
+	width: 70dvw;
+	box-shadow: -2px 2px 5px grey;
+	margin-top: 1.5svh;
+  margin-bottom: 1.5svh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;	
+}
+
+.visibility {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10dvw;
+	color: black;
+	margin: 1.5svh;
+  background-color: white;
+  border-radius: 1svh;
+}
+
+.passWordSvg {
+	width: 10dvw;
+	height: 4svh;
+	color: white;
+	box-shadow: 0 2px 4px 0 silver, 0 0.75px 2.5px 0 white;
+	border-radius: 1svh;
+}
+
+.button {
+  background-color: white;
+	color: silver;
+	width: 55.5dvw;
+  margin: 1.5svh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

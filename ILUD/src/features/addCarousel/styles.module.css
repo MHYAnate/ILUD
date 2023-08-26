@@ -47,7 +47,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  z-index: 2;
+  
 }
 
 .mainCard{
@@ -88,7 +88,7 @@
 .imgCover1{
   width: 44vw;
   height: 17vh;
-  z-index: 1;
+
   border-radius: 5px;
 }
 

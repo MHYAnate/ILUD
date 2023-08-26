@@ -17,7 +17,7 @@ interface CarouselProps {
 
 const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [inneractiveIndex, innersetActiveIndex] = useState(0);
+  const [inneractiveIndex, setInnerActiveIndex] = useState(0);
 
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
@@ -26,7 +26,7 @@ const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
   };
 
   const inhandleNext = () => {
-    innersetActiveIndex((prevIndex) =>
+    setInnerActiveIndex((prevIndex) =>
       prevIndex === Services[activeIndex].services.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -41,11 +41,11 @@ const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
   }, [activeIndex, Services]);
 
   const serviceImage = useMemo(() => {
-    return Services[activeIndex].services[inneractiveIndex].src;
+    return Services[activeIndex].services[inneractiveIndex]?.src;
   }, [activeIndex, inneractiveIndex, Services]);
 
   const serviceTitle = useMemo(() => {
-    return Services[activeIndex].services[inneractiveIndex].name;
+    return Services[activeIndex].services[inneractiveIndex]?.name;
   }, [activeIndex, inneractiveIndex, Services]);
 
   useEffect(() => {
@@ -82,26 +82,26 @@ const InCarousel: React.FC<CarouselProps> = memo(({ Services }) => {
 				</div>
 				<div className={styles.cardS} >
 					<div >
-						<span className={styles.titleSpan}>{Services[activeIndex].services[inneractiveIndex].name} Services</span>
+						<span className={styles.titleSpan}>{Services[activeIndex]?.services[inneractiveIndex]?.name} Services</span>
 					</div>
 					<div className={styles.imgCover}>
             <div className={styles.front}>
-              <img object-fit= 'cover'  className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+              <img object-fit= 'cover'  className={styles.img} src={Services[activeIndex]?.services[inneractiveIndex]?.src}/>
             </div>
             <div className={styles.back}>
-					    <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+					    <img object-fit= 'cover' className={styles.img} src={Services[activeIndex]?.services[inneractiveIndex]?.src}/>
             </div>
             <div className={styles.right}>
-              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex]?.services[inneractiveIndex]?.src}/>
             </div>
             <div className={styles.left}>
-              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex]?.services[inneractiveIndex]?.src}/>
             </div>
             <div className={styles.top}>
-              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex]?.services[inneractiveIndex]?.src}/>
             </div>
             <div className={styles.bottom}>
-              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex].services[inneractiveIndex].src}/>
+              <img object-fit= 'cover' className={styles.img} src={Services[activeIndex]?.services[inneractiveIndex]?.src}/>
             </div>
 					</div>
 				</div>

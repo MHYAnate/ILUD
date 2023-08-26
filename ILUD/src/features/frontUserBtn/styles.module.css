@@ -1,0 +1,220 @@
+.caseContainer{
+  width: 100%;
+}
+
+.case{
+  height: 10svh;
+  width: 45dvw;
+  height: fit-content;
+
+}
+
+.userBtnContainer{
+  height: 10svh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tabSpan1{
+  text-shadow: 0.1px 1px 4px black, 0 0 28px white, 0 0 5x white;
+}
+.tabSpan2{
+  text-shadow: 0.25px 0.25px 1px black, 0 0 7px white, 0 0 1.25px white;
+}
+
+.userBtn1{
+  width: 45dvw;
+  height: 7svh;
+}
+
+.userBtn2{
+  width: 45dvw;
+  height: 7svh;
+  box-shadow: 0 2px 4px 0 black, 0 0.75px 2.5px 0 white;
+  border-radius: 1svh;
+  color: white;
+  text-shadow: 0.25px 0.25px 1px black, 0 0 7px white, 0 0 1.25px white;
+  font-weight:bold ;
+}
+.userBtnWrapper1{
+  width: 45dvw;
+  height: 7svh;
+  box-shadow: 0 4px 8px 0 black, 0 1.5px 5px 0 white;
+  border-radius: 1svh;
+  color: white;
+  text-shadow: 0.25px 0.25px 1px black, 0 0 7px white, 0 0 1.25px white;
+  font-weight:bold ;
+  transform: scale(0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.svg{
+  width: 10dvw;
+  height: 7svh;
+}
+
+.userBtnWrapper2{
+  width: 45dvw;
+  height: 7svh;
+  box-shadow: 0 2px 4px 0 black, 0 0.75px 2.5px 0 white;
+  border-radius: 1svh;
+  color: white;
+  text-shadow: 0.25px 0.25px 1px black, 0 0 7px white, 0 0 1.25px white;
+  font-weight:bold ;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+}
+
+.existingUserIn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95dvw;
+  height: 10svh;
+}
+
+.newUserIn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95dvw;
+  height: 10svh;
+}
+
+.existingClientUser{
+ width: 95dvw;
+ height: 51svh;
+ background-color:  rgb(243 244 246);
+}
+.newClientUser{
+  width: 95dvw;
+  height: 51svh;
+  background-color:  rgb(243 244 246);
+}
+.existingServiceProviderUser{
+  width: 95dvw;
+ height: 52svh;
+ background-color:  rgb(243 244 246);
+}
+
+.existingClientUserIn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: silver;
+  width: 92dvw;
+  height: 50svh;
+  margin-left: 1.3dvw;
+  margin-top: 0.65svh;
+}
+.logInHeader{
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 0.25px 0.25px 1px white, 0 0 7px white, 0 0 1.25px white;
+  width: 90dvw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2svh;
+}
+.newClientUserIn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: silver;
+  width: 92dvw;
+  height: 50svh;
+  margin-left: 1.3dvw;
+  margin-top: 0.65svh;
+}
+.overFlow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  width: 92dvw;
+  height: 35sh;
+}
+.existingServiceProviderUserIn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: silver;
+  width: 92dvw;
+  height: 50svh;
+  margin-left: 1.3dvw;
+  margin-top: 0.65svh;
+}
+
+.userSvg{
+  width: 98dvw;
+  height: 7svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1svh;
+}
+
+.numberCover{
+  font-weight: bold;
+  color: black;
+  text-shadow: 0.25px 0.25px 1px black, 0 0 7px white, 0 0 1.25px white;
+  margin-top: 1svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.passCodeCover{
+  font-weight: bold;
+  color: black;
+  text-shadow: 0.25px 0.25px 1px black, 0 0 7px white, 0 0 1.25px white;
+  margin-top: 1svh;
+  margin-bottom: 1svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.innerCase{
+  position: fixed;
+  top: 17.4svh;
+  left: 2.45dvw;
+  z-index: 5;
+  background-color:  rgb(243 244 246);
+}
+
+.logInCover{
+  width: 92dvw;
+  height: 7svh;
+  border-bottom-left-radius: 1dvw;
+  border-bottom-right-radius: 1dvw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logIn{
+  font-weight: bold;
+  color: white;
+  text-shadow: 0.25px 0.25px 1px black, 0 0 7px white, 0 0 1.25px white;
+  width: 40dvw;
+  height: 5svh;
+  border-radius: 14svh;
+  background-color: black;
+  box-shadow: 0 2px 4px 0 black, 0 0.75px 2.5px 0 white;
+}
+

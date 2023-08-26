@@ -1,11 +1,5 @@
-import React, {
-	useState,
-	useEffect,
-	useMemo,
-	memo,
-	useTransition,
-} from "react";
-import { Services } from "../addCarousel/data";
+import React, { useState, memo, useTransition } from "react";
+
 import styles from "./styles.module.css";
 import { TabButton } from "./aboutBtn";
 
@@ -36,12 +30,25 @@ const AboutTab: React.FC<CarouselProps> = memo(({ Services }) => {
 const SlowPost: React.FC<CarouselProps> = ({ Services }) => {
 	const [isPending, startTransition] = useTransition();
 	const [tab, setTab] = useState("");
+	const [btnVisible1, setBtnVisible1] = useState(false);
+	const [btnVisible2, setBtnVisible2] = useState(false);
+	const [btnVisible3, setBtnVisible3] = useState(false);
 
 	function selectTab(nextTab: string) {
 		startTransition(() => {
 			setTab(nextTab);
 		});
 	}
+
+	const handleToggleBtn1 = () => {
+		setBtnVisible1((prevBtnVisible) => !prevBtnVisible);
+	};
+	const handleToggleBtn2 = () => {
+		setBtnVisible2((prevBtnVisible) => !prevBtnVisible);
+	};
+	const handleToggleBtn3 = () => {
+		setBtnVisible3((prevBtnVisible) => !prevBtnVisible);
+	};
 
 	let startTime = performance.now();
 
@@ -120,13 +127,46 @@ const SlowPost: React.FC<CarouselProps> = ({ Services }) => {
 						tab === "Automotive" ? selectTab("") : selectTab("Automotive")
 					}
 				>
-					<div className={styles.tabHolder}>
+					<div onClick={handleToggleBtn1} className={styles.tabHolder}>
 						<img
 							className={styles.img1}
 							src={autoCategory?.src}
 							alt={autoCategory?.category}
 						/>
 						{autoCategory?.category}
+						<div className={styles.chevron}>
+							{btnVisible1 ? (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={1.5}
+									stroke="currentColor"
+									className={styles.svg1}
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+									/>
+								</svg>
+							) : (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={1.5}
+									stroke="currentColor"
+									className={styles.svg1}
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+									/>
+								</svg>
+							)}
+						</div>
 					</div>
 				</TabButton>
 				<div className={styles.tabControl}>
@@ -138,13 +178,46 @@ const SlowPost: React.FC<CarouselProps> = ({ Services }) => {
 						tab === "maintenance" ? selectTab("") : selectTab("maintenance")
 					}
 				>
-					<div className={styles.tabHolder}>
+					<div onClick={handleToggleBtn2} className={styles.tabHolder}>
 						<img
 							className={styles.img1}
 							src={maintenanceCategory?.src}
 							alt={maintenanceCategory?.category}
 						/>
 						{maintenanceCategory?.category}
+						<div className={styles.chevron}>
+							{btnVisible2 ? (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={1.5}
+									stroke="currentColor"
+									className={styles.svg2}
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+									/>
+								</svg>
+							) : (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={1.5}
+									stroke="currentColor"
+									className={styles.svg2}
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+									/>
+								</svg>
+							)}
+						</div>
 					</div>
 				</TabButton>
 				<div className={styles.tabControl}>
@@ -156,13 +229,46 @@ const SlowPost: React.FC<CarouselProps> = ({ Services }) => {
 						tab === "Personal" ? selectTab("") : selectTab("Personal")
 					}
 				>
-					<div className={styles.tabHolder}>
+					<div onClick={handleToggleBtn3} className={styles.tabHolder}>
 						<img
 							className={styles.img1}
 							src={personalCategory?.src}
 							alt={personalCategory?.category}
 						/>
 						{personalCategory?.category}
+						<div className={styles.chevron}>
+							{btnVisible3 ? (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={1.5}
+									stroke="currentColor"
+									className={styles.svg3}
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+									/>
+								</svg>
+							) : (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={1.5}
+									stroke="currentColor"
+									className={styles.svg3}
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+									/>
+								</svg>
+							)}
+						</div>
 					</div>
 				</TabButton>
 				<div className={styles.tabControl}>

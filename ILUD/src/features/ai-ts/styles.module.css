@@ -1,0 +1,91 @@
+.container{
+  width: 96dvw;
+  height: 30.5svh;
+  background-color: silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1svh;
+  padding-bottom: 2svh;
+}
+
+.inputBtnContainer{
+  padding-top: 1svh;
+  display: flex;
+  justify-content: space-around;
+  width: 99dvw;
+  height: 10svh;
+}
+
+.input{
+  width: 65dvw;
+  height: 8svh;
+  display: flex;
+  padding-top: 0;
+  overflow-y: auto;
+  border: 1px solid silver;
+  border-radius: 3px;
+  padding-left: 3dvw;
+  margin-left: 1.5dvw;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btnContain{
+  width: 20dvw;
+  height: 5svh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.7dvw;
+  border-radius: 30px;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.svg{
+  width: 10dvw;
+  height: 4svh;
+  color: white;
+}
+
+.svg1{
+  width: 10dvw;
+  height: 3svh;
+  color: white;
+  margin-left: -5dvw;
+}
+
+.result{
+  background-color: black;
+  color: white;
+  height: 29svh;
+  width: 90dvw;
+  overflow-y: auto;
+  border-radius: 3px;
+  padding-left: 3dvw;
+  padding-top: 1svh;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 0.7em;
+}
+
+.aiBtn{
+  width: 30dvw;
+  height: 5svh;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 4px 8px 0 black, 0 1.5px 5px 0 white;
+  text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai{
+  position: fixed;
+  top: 11.9svh;
+  left: 2dvw;
+}
