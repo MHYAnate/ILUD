@@ -3,16 +3,21 @@ import styles from "./styles.module.css";
 import Passcode from "../passcode/passcode";
 import Number from "../number/number";
 import ClientLogIn from "../forms/clientLogIn";
+interface post {
+  index: number;
 
+}
 const ExistingClient = memo(function Existing() {
 	let items = [];
 
-	items.push(<SlowPost />);
+	for (let i = 0; i < 1; i++) {
+    items.push(<SlowPost key={i} index={i} />);
+  }
 
 	return <ul className={styles.existingClientUser}>{items}</ul>;
 });
 
-const SlowPost: React.FC = () => {
+const SlowPost: React.FC<post> = () => {
 	let startTime = performance.now();
 
 	while (performance.now() - startTime < 500) {

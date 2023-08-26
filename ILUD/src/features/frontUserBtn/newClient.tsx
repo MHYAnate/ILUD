@@ -5,15 +5,20 @@ import { TabButton } from "./inBtn";
 import Passcode from "../passcode/passcode";
 import Number from "../number/number";
 
+interface post {
+  index: number;
+}
 const NewClient = memo(function New() {
 	let items = [];
 
-	items.push(<SlowPost />);
+	for (let i = 0; i < 1; i++) {
+    items.push(<SlowPost key={i} index={i} />);
+  }
 
 	return <ul className={styles.newClientUser}>{items}</ul>;
 });
 
-const SlowPost: React.FC = () => {
+const SlowPost: React.FC<post> = () => {
 	let startTime = performance.now();
 
 	while (performance.now() - startTime < 500) {

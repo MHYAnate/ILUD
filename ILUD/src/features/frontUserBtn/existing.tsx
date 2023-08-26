@@ -5,12 +5,17 @@ import styles from "./styles.module.css";
 import ExistingServiceProvider from './existingServiceProvider'
 import ExistingClient from './existingClient'
 
+interface post {
+  index: number;
+
+}
 const Existing = memo(function Existing() {
 
   let items = [];
 
-    items.push(<SlowPost/>);
-
+  for (let i = 0; i < 1; i++) {
+    items.push(<SlowPost key={i} index={i} />);
+  }
   return (
     <ul className={styles.existingUser}>
       {items}
@@ -18,7 +23,7 @@ const Existing = memo(function Existing() {
   );
 });
 
-const  SlowPost: React.FC =()=> {
+const  SlowPost: React.FC<post> =()=> {
 
   const [isPending, startTransition] = useTransition();
   const [tab, setTab] = useState('');

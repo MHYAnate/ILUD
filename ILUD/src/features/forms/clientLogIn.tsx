@@ -43,9 +43,10 @@ export default function ClientLogIn() {
 		<div className={styles.formContainer}>
 			<form className={styles.form} onSubmit={handleSubmit(console.log)}>
 				<input
+				type="number"
 					className={styles.input}
 					{...register("number", { required: `Number required` })}
-					placeholder="Please Enter Your Mobile_Number"
+					placeholder="Mobile_Number"
 				/>
 
 				{errors?.number && (
@@ -54,7 +55,7 @@ export default function ClientLogIn() {
 				<div className={styles.passWordContainer}>
 					<input
 						className={styles.passWord}
-						placeholder="Please Enter Your Pass_Word"
+						placeholder="PassWord"
 						type={passwordVisible ? "text" : "password"}
 						{...register("passWord", {
 							minLength: 2,

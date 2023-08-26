@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 
 interface post {
   index: number;
-
 }
 
 const PostsTab = memo(function PostsTab() {
