@@ -1,14 +1,19 @@
 import React, { memo } from "react";
 import styles from "./styles.module.css";
-
+interface post {
+  index: number;
+}
 const ContactUs = memo(function PostsTab() {
 	let items = [];
-	items.push(<SlowPost />);
+	for (let i = 0; i < 1; i++) {
+    items.push(<SlowPost key={i} index={i} />);
+  }
+
 
 	return <ul className={styles.contactUs}>{items}</ul>;
 });
 
-const SlowPost: React.FC = () => {
+const SlowPost: React.FC<post> = () => {
 	let startTime = performance.now();
 
 	while (performance.now() - startTime < 500) {

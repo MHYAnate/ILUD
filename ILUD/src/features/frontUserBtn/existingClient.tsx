@@ -5,7 +5,6 @@ import Number from "../number/number";
 import ClientLogIn from "../forms/clientLogIn";
 interface post {
   index: number;
-
 }
 const ExistingClient = memo(function Existing() {
 	let items = [];

@@ -1,14 +1,21 @@
 import * as React from "react";
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
 import Passcode from "../passcode/passcode";
-import { number } from "zod";
+import { any, number } from "zod";
+import PassCode from "./passCode";
 
 type FormValue = {
-	number: string;
-	passWord: string;
-	checkbox: boolean;
+	number: number;
+	passWord: number;
+	name: string;
+	data: string;
+	passCode: string | number[];
+	passCode0: string;
+	passCode1: number;
+	passCode2: number;
+	passCode3: number;
 };
 
 export default function ClientLogIn() {
@@ -16,13 +23,30 @@ export default function ClientLogIn() {
 		register,
 		handleSubmit,
 		watch,
+		reset,
 		unregister,
-		formState: { errors, isSubmitted, isSubmitting, isDirty, isValid },
+		setFocus,
+		formState: {
+			isSubmitSuccessful,
+			errors,
+			isSubmitted,
+			isSubmitting,
+			isDirty,
+			isValid,
+		},
 	} = useForm<FormValue>({
 		defaultValues: {
-			number: "",
-			passWord: "",
+			number: undefined,
+			passWord: undefined,
+			name: undefined,
+			passCode: undefined,
+			passCode0: "",
+			passCode1: undefined,
+			passCode2: undefined,
+			passCode3: undefined,
 		},
+		shouldUseNativeValidation: true,
+		mode: "onChange",
 	});
 
 	const [passwordVisible, setPasswordVisible] = useState(false);
@@ -31,48 +55,154 @@ export default function ClientLogIn() {
 		setPasswordVisible((prevPasswordVisible) => !prevPasswordVisible);
 	};
 
-	const check = watch("checkbox");
+	const check0 = watch("passCode0");
+	const check1 = watch("passCode1");
+	const check2 = watch("passCode2");
+	const check3 = watch("passCode3");
+
+	if (isSubmitSuccessful) {
+		reset();
+	}
 
 	React.useEffect(() => {
-		if (isSubmitted) {
-			unregister(["passWord", "number"]);
+		if (isDirty) {
+			if (check0) {
+				setFocus("passCode1");
+			}
+			if (check1) {
+				setFocus("passCode2");
+			}
+			if (check2) {
+				setFocus("passCode3");
+			}  if (check3) {
+				setFocus("passCode3");
+			}
 		}
-	}, [unregister, check]);
+	}, [setFocus, check0, check1, check2, check3]);
+
+	React.useEffect(() => {
+		const onKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+			if (e.key === "Backspace") {
+				if (check3) {
+					e.preventDefault();
+					setFocus("passCode3");
+				} else if (check2) {
+					e.preventDefault();
+					setFocus("passCode2");
+				} else if (check1) {
+					e.preventDefault();
+					setFocus("passCode1");
+				} else if (check0) {
+					e.preventDefault();
+					setFocus("passCode0");
+				}else{
+					setFocus("passCode0");
+				}
+			}
+		};
+
+		window.addEventListener("keyup", onKeyUp as any); // Add 'as any' to cast the type
+
+		return () => {
+			window.removeEventListener("keyup", onKeyUp as any); // Add 'as any' to cast the type
+		};
+	}, [check0, check1, check2, check3, isDirty, setFocus]);
+
+	React.useEffect(()=>{
+		const onKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+			if(e.key && isDirty && e.key !=="Backspace"){
+				if(check0){
+					setFocus("passCode1")
+				}
+				if(check1){
+					setFocus("passCode2")
+				}
+				if(check2){
+					setFocus("passCode3")
+				}
+				if(check3){
+					setFocus("passCode3")
+				}
+			}
+		};
+
+		window.addEventListener("keydown", onKeyUp as any); // Add 'as any' to cast the type
+
+		return () => {
+			window.removeEventListener("keydown", onKeyUp as any); // Add 'as any' to cast the type
+		};
+	}, [check0, check1, check2, check3, isDirty, setFocus]);
 
 	return (
 		<div className={styles.formContainer}>
 			<form className={styles.form} onSubmit={handleSubmit(console.log)}>
 				<input
-				type="number"
+					type="number"
 					className={styles.input}
-					{...register("number", { required: `Number required` })}
+					{...register("number", {
+						pattern: {
+							value: /^\d{11}$/,
+							message: `Eleven Digit's Required`,
+						},
+					})}
 					placeholder="Mobile_Number"
 				/>
 
-				{errors?.number && (
+				{/* {errors?.number && (
 					<p className={styles.error}>{errors?.number.message}</p>
-				)}
-				<div className={styles.passWordContainer}>
-					<input
-						className={styles.passWord}
-						placeholder="PassWord"
-						type={passwordVisible ? "text" : "password"}
-						{...register("passWord", {
-							minLength: 2,
-							validate: (value) => value === "ai" || `enter valid id`,
-						})}
-					/>
+				)} */}
 
-					
-					<button className={styles.visibility} type="button" onClick={handleTogglePassword}>
+				<div className={styles.passcodeContainer}>
+					<input
+						{...register("passCode0", {
+							required: "error message",
+						})}
+						onKeyUp={() => onkeyup}
+						maxLength={1}
+						className={styles.input1}
+						type={passwordVisible ? "text" : "password"}
+					/>
+					<input
+						{...register("passCode1", {
+							required: "error message",
+						})}
+						onKeyUp={() => onkeyup}
+						className={styles.input1}
+						maxLength={1}
+						type={passwordVisible ? "text" : "password"}
+					/>
+					<input
+						{...register("passCode2", {
+							required: "error message",
+						})}
+						onKeyUp={() => onkeyup}
+						maxLength={1}
+						className={styles.input1}
+						type={passwordVisible ? "text" : "password"}
+					/>
+					<input
+						{...register("passCode3", {
+							required: "error message",
+						})}
+						onKeyUp={() => onkeyup}
+						maxLength={1}
+						className={styles.input1}
+						type={passwordVisible ? "text" : "password"}
+					/>
+					<button
+						type="button"
+						className={styles.btn}
+						id="toggle-password"
+						onClick={handleTogglePassword}
+					>
 						{passwordVisible ? (
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
 								strokeWidth={1.5}
-								stroke="silver"
-								className={styles.passWordSvg}
+								stroke="currentColor"
+								className={styles.svg}
 							>
 								<path
 									strokeLinecap="round"
@@ -86,8 +216,8 @@ export default function ClientLogIn() {
 								fill="none"
 								viewBox="0 0 24 24"
 								strokeWidth={1.5}
-								stroke="silver"
-								className={styles.passWordSvg}
+								stroke="currentColor"
+								className={styles.svg}
 							>
 								<path
 									strokeLinecap="round"
@@ -102,12 +232,11 @@ export default function ClientLogIn() {
 							</svg>
 						)}
 					</button>
-					
 				</div>
-        {errors?.passWord && (
-						<p className={styles.error}>{errors?.passWord.message}</p>
-					)}
-				<input className={styles.button} type="submit" />
+
+				<button className={styles.button} type="submit">
+					Enter
+				</button>
 			</form>
 		</div>
 	);
