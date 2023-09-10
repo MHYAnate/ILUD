@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import styles from "./styles.module.css";
 import Passcode from "../passcode/passcode";
 import Number from "../number/number";
+import VendorLogIn from '../forms/vendorLogIn';
 
 interface post {
   index: number;
@@ -46,17 +47,8 @@ const  SlowPost: React.FC<post> =()=> {
 					/>
 				</svg>
 			</div>
-			<div className={styles.numberCover}>
-        <span>Vendor Mobile_Phone Number</span>
-				<Number />
-			</div>
-			<div className={styles.passCodeCover}>
-      <span>Vendor PassCode</span>
-				<Passcode />
-			</div>
-      <div className={styles.logInCover}>
-        <button className={styles.logIn}>Log_In</button>
-      </div>
+			<h1 className={styles.logInHeader}>Existing Vendor</h1>
+			<VendorLogIn/>
   </li>
 );
 }

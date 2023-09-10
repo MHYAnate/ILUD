@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { TabButton } from "./inBtn";
 import Passcode from "../passcode/passcode";
 import Number from "../number/number";
+import ClientSignUp from "../forms/clientSignUp";
 
 interface post {
   index: number;
@@ -43,19 +44,9 @@ const SlowPost: React.FC<post> = () => {
 					/>
 				</svg>
 			</div>
-      <div className={styles.overFlow}>
-      <div className={styles.numberCover}>
-        <span>Client Mobile_Phone Number</span>
-				<Number />
-			</div>
-			<div className={styles.passCodeCover}>
-      <span>Client PassCode</span>
-				<Passcode />
-			</div>
-      </div>
-      <div className={styles.logInCover}>
-        <button className={styles.logIn}>Link_Up</button>
-      </div>
+      <h1 className={styles.logInHeader}>New Client</h1>
+			<ClientSignUp/>
+			
 		</li>
 	);
 };

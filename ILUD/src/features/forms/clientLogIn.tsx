@@ -2,16 +2,10 @@ import * as React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
-import Passcode from "../passcode/passcode";
-import { any, number } from "zod";
-import PassCode from "./passCode";
+
 
 type FormValue = {
 	number: number;
-	passWord: number;
-	name: string;
-	data: string;
-	passCode: string | number[];
 	passCode0: string;
 	passCode1: number;
 	passCode2: number;
@@ -37,10 +31,7 @@ export default function ClientLogIn() {
 	} = useForm<FormValue>({
 		defaultValues: {
 			number: undefined,
-			passWord: undefined,
-			name: undefined,
-			passCode: undefined,
-			passCode0: "",
+			passCode0: undefined,
 			passCode1: undefined,
 			passCode2: undefined,
 			passCode3: undefined,
@@ -54,7 +45,7 @@ export default function ClientLogIn() {
 	const handleTogglePassword = () => {
 		setPasswordVisible((prevPasswordVisible) => !prevPasswordVisible);
 	};
-
+  const check = watch("number");
 	const check0 = watch("passCode0");
 	const check1 = watch("passCode1");
 	const check2 = watch("passCode2");
@@ -234,7 +225,10 @@ export default function ClientLogIn() {
 					</button>
 				</div>
 
-				<button className={styles.button} type="submit">
+				<button 
+				className={styles.button} 
+				type="submit"
+				>
 					Enter
 				</button>
 			</form>

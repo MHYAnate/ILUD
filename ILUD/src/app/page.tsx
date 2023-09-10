@@ -5,7 +5,6 @@ import styles from "./styles.module.css";
 import { Services } from "@/features/addCarousel/data";
 import InCarousel from "@/features/addCarousel/ad1";
 import Iludfooter from "@/features/iludfooter/iludfooter";
-import UserBtnContainer from "@/features/firstPageLog/userBtn";
 import AboutContainer from "@/features/aboutUs/about";
 import Ai from "@/features/ai-ts/aiBtn";
 import ContactUsBtn from "@/features/contactUs/contactUsBtn";
@@ -26,7 +25,7 @@ export default function Home() {
 					<InCarousel Services={Services} />
 				</div>
 				<div className={styles.btnCard}>
-					<UserBtn/>
+					<UserBtn />
 				</div>
 				<div className={styles.footer}>
 					<div className={styles.contactUs}>

@@ -2,23 +2,27 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100svw;
-	padding-top: 2.5dvh;
-	padding-bottom: 2.5dvh;
+	width: 94dvw;
 }
 
 .form {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-	width: 95%;
+	width: 90dvw;
+	height: 50svh;
+	overflow-y: auto;
+	background-color:silver;
+	padding-bottom: 3svh;
 }
 
+
 .input {
-	margin: 1.5svh;
+	margin-top: 2svh;
+	margin-bottom: 1.5svh;
 	color: black;
-	width: 90dvw;
+	width: 87dvw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -28,6 +32,23 @@
   padding-left: 1dvw;
   padding-right: 1dvw;
   height: 5svh;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	background-color: white;
+}
+
+.textarea{
+  margin-top: 2svh;
+	margin-bottom: 1.5svh;
+	color: black;
+	width: 87dvw;
+  box-shadow: -2px 2px 5px grey;
+  padding-left: 1dvw;
+  padding-right: 1dvw;
+  height: 15svh;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	background-color: white;
 }
 
 .error {
@@ -77,22 +98,24 @@
 .button {
   background-color: black;
 	color: white;
-	width: 30dvw;
+	width: 85dvw;
   margin-top: 3svh;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 2px 4px 0 black, 0 0.75px 2.5px 0 white;
   height: 5.55svh;
-  border-radius: 20svh;
+  border-radius: 1svh;
 }
 
 
 .passcodeContainer{
-  background-color: black;
+	margin-top: 1.5svh;
+  background-color: white;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 70dvw;
-  height: 7svh;
+  height: 6svh;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .btn{
   width: fit-content;
@@ -103,7 +126,7 @@
   border-radius: 7px;
   display: flex;
   padding-left: 3.5%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -111,9 +134,62 @@
 .svg{
   width: 10dvw;
   height: 4svh;
-  color: white;
+  color: black;
   box-shadow: 0 2px 4px 0 black, 0 0.75px 2.5px 0 white;
   border-radius: 1svh;
 }
 
+.img1{
+  width: 10dvw;
+  height: 5svh;
+  border-radius: 5%;
+  margin-right: 3dvw;
+}
+
+.select{
+	margin-top: 2svh;
+	margin-bottom: 1.5svh;
+	color: black;
+	width: 70dvw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  letter-spacing: 1dvw;
+  box-shadow: -2px 2px 5px grey;
+  padding-left: 1dvw;
+  padding-right: 1dvw;
+  height: 5svh;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	background-color: white;
+}
+.option{
+	display: flex;
+}
+
+.tabControl{
+  max-height: 20svh;
+  width: 50dvw;
+  overflow-y: auto;
+}
+
+.renderCover{
+  display: flex;
+  align-items: center;
+  margin-left: 1dvw;
+  margin-bottom: 1svh;
+  font-weight: 500;
+  max-height: 30svh;
+  width: 70dvw;
+  border-bottom: .3px solid black;
+  padding-bottom: 1svh;
+}
+
+.img{
+  width: 10dvw;
+  height: 5svh;
+  border-radius: 50%;
+  margin-right: 1dvw;
+}
 
