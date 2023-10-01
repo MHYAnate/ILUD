@@ -86,8 +86,6 @@ const AiInterface: React.FC = () => {
     }
 	};
 
-
-
 	useEffect(() => {
 		const nodeInput = promtInput.current;
 		const nodeStart = startBtn.current;

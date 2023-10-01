@@ -18,6 +18,7 @@ type FormValue = {
 	passCodeV1: number | string;
 	passCodeV2: number | string;
 	passCodeV3: number | string;
+	pinCode: number | string;
 	selectField: string;
 	selectFieldOption: string;
 };
@@ -32,6 +33,7 @@ export default function VendorSignUp() {
 		reset,
 		unregister,
 		setFocus,
+		setValue,
 		control,
 		formState: {
 			isSubmitSuccessful,
@@ -55,6 +57,7 @@ export default function VendorSignUp() {
 			passCodeV1: "",
 			passCodeV2: "",
 			passCodeV3: "",
+			pinCode: "",
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
@@ -89,7 +92,12 @@ export default function VendorSignUp() {
 	const checkV3 = watch("passCodeV3");
 	const check4 = watch("selectField");
 
+  const passCodeV0 = (document.querySelector('[name="passCodeV0"]') as HTMLInputElement)?.value || '';
+    const passCodeV1 = (document.querySelector('[name="passCodeV1"]') as HTMLInputElement)?.value || '';
+    const passCodeV2 = (document.querySelector('[name="passCodeV2"]') as HTMLInputElement)?.value || '';
+    const passCodeV3 = (document.querySelector('[name="passCodeV3"]') as HTMLInputElement)?.value || '';
 
+    const pinCode = passCodeV0 + passCodeV1 + passCodeV2 + passCodeV3;
 
 	if (isSubmitSuccessful) {
 		reset();
@@ -295,6 +303,11 @@ export default function VendorSignUp() {
 			</option>
 		));
 	}
+
+	React.useEffect(()=>{
+		setValue("pinCode", pinCode)
+	},[checkV0, checkV1, checkV2, checkV3, isDirty, setFocus])
+
 	return (
 		<div className={styles.formContainer}>
 			<form className={styles.form} onSubmit={handleSubmit(console.log)}>

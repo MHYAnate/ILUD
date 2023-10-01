@@ -70,7 +70,7 @@ const  SlowPost: React.FC<post> =()=> {
       </div>
   </li>
   </>
-);
+); 
 }
 
 export default New;

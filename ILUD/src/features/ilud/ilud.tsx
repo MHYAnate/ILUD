@@ -1,10 +1,14 @@
+'use client'
 import styles from "./styles.module.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Ilud = () => {
+	const router = useRouter();
+	const ccc = "asd"
 	return (
 		<>
-			<div className={styles.cover}>
+			<div className={styles.cover} onClick={()=>router.push(`/client/${ccc}`) }>
 				<div className={styles.ilud}>
 					<span>I</span>
 					<span>L</span>

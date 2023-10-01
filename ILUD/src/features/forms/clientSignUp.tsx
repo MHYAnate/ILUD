@@ -1,7 +1,19 @@
 import * as React from "react";
-import { useState} from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
+import SignUp from "@/firebase/firebase";
+import { useRouter } from "next/navigation";
+import firebase from "@/firebase/firebase";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+
+interface UserData {
+  email: string;
+  password: string;
+  displayName: string;
+  address: string;
+}
 
 type FormValue = {
 	userName: string;
@@ -16,7 +28,11 @@ type FormValue = {
 	passCodeV1: number | string;
 	passCodeV2: number | string;
 	passCodeV3: number | string;
+	pinCode: number | string;
 };
+
+const auth = getAuth()
+const currentUser = auth.currentUser!;
 
 export default function ClientSignUp() {
 	const {
@@ -26,6 +42,7 @@ export default function ClientSignUp() {
 		reset,
 		unregister,
 		setFocus,
+		setValue,
 		formState: {
 			isSubmitSuccessful,
 			errors,
@@ -48,6 +65,7 @@ export default function ClientSignUp() {
 			passCodeV1: "",
 			passCodeV2: "",
 			passCodeV3: "",
+			pinCode: "",
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
@@ -59,16 +77,29 @@ export default function ClientSignUp() {
 		setPasswordVisible((prevPasswordVisible) => !prevPasswordVisible);
 	};
 
-	const userNameId = document.getElementById("uName") as HTMLElement | null;
+	const userNameId = document.getElementById("uName") as HTMLInputElement | null;
+	
 	const mobileNumberId = document.getElementById(
 		"uNumber"
-	) as HTMLElement | null;
+	) as HTMLInputElement | null;
+
 	const mobileNumberVId = document.getElementById(
 		"uNumberV"
 	) as HTMLElement | null;
 	const userAddressId = document.getElementById(
 		"uAddress"
-	) as HTMLElement | null;
+	) as HTMLElement | null
+
+	const userName =(document.querySelector("#uName") as HTMLInputElement)
+	?.value || "";
+	const userAddress =(document.querySelector("#uAddress") as HTMLInputElement)
+	?.value || "";
+
+	const userPin =(document.querySelector("#pin") as HTMLInputElement)
+	?.value || "";
+
+	const Usernumber =(document.querySelector("#uNumber") as HTMLInputElement)
+	?.value || "";
 
 	const check = watch("number");
 	const check0 = watch("passCode0");
@@ -81,7 +112,25 @@ export default function ClientSignUp() {
 	const checkV2 = watch("passCodeV2");
 	const checkV3 = watch("passCodeV3");
 
+	const passCodeV0 =
+		(document.querySelector('[name="passCodeV0"]') as HTMLInputElement)
+			?.value || "";
+	const passCodeV1 =
+		(document.querySelector('[name="passCodeV1"]') as HTMLInputElement)
+			?.value || "";
+	const passCodeV2 =
+		(document.querySelector('[name="passCodeV2"]') as HTMLInputElement)
+			?.value || "";
+	const passCodeV3 =
+		(document.querySelector('[name="passCodeV3"]') as HTMLInputElement)
+			?.value || "";
+
+	const pinCode = "c" + "l" + passCodeV0 + passCodeV1 + passCodeV2 + passCodeV3;
+
+	const router = useRouter();
+
 	if (isSubmitSuccessful) {
+		
 		reset();
 	}
 
@@ -261,9 +310,48 @@ export default function ClientSignUp() {
 		};
 	}, [checkV0, checkV1, checkV2, checkV3, isDirty, setFocus]);
 
+	React.useEffect(() => {
+		setValue("pinCode", pinCode);
+	}, [checkV0, checkV1, checkV2, checkV3, isDirty, setFocus]);
+
+  async function SignUp(userData: UserData) {
+		let result: any = null;
+		let error: any = null;
+	
+		const  auth  = firebase.auth;
+		const { database } = firebase;
+		
+	
+		try {
+			result = await createUserWithEmailAndPassword(
+				auth,
+				userData.email,
+				userData.password
+			);
+			const user = result.user;
+			router.push(`/client/${user.displayName}`);
+			await sendEmailVerification(currentUser)
+			await updateProfile(currentUser, {
+				displayName: userName,
+				// photoURL: "https://robohash.org/2?set=set2"
+			})
+		
+			
+		
+	
+			await setDoc(doc(database, "client", user.displayName), {
+				address: userData.address,
+			});
+		} catch (e: any) {
+			error = e;
+		}
+	
+		return { result, error }
+	}
+	
 	return (
 		<div className={styles.formContainer}>
-			<form className={styles.form} onSubmit={handleSubmit(console.log)}>
+			<form className={styles.form} onSubmit={handleSubmit(()=> SignUp({email:Usernumber, password:userPin, displayName:userName, address: userAddress}))}>
 				<div>
 					<input
 						type="text"
@@ -280,16 +368,16 @@ export default function ClientSignUp() {
 				</div>
 				<div>
 					<input
-						type="number"
-						className={styles.input}
+						type="text"
+						className={styles.inputS}
 						{...register("number", {
 							pattern: {
-								value: /^\d{11}$/,
-								message: `Eleven Digit's Required`,
+								value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+								message: `Email Required`,
 							},
 						})}
 						id="uNumber"
-						placeholder="Mobile_Number"
+						placeholder="email"
 					/>
 				</div>
 				<div>
@@ -361,6 +449,7 @@ export default function ClientSignUp() {
 							className={styles.input1}
 							type={passwordVisible ? "text" : "password"}
 						/>
+
 						<button
 							type="button"
 							className={styles.btn}
@@ -411,6 +500,7 @@ export default function ClientSignUp() {
 						<input
 							{...register("passCodeV0", {
 								required: "error message",
+								validate: (value, formValues) => value === check0,
 							})}
 							onKeyUp={() => onkeyup}
 							maxLength={1}
@@ -420,6 +510,7 @@ export default function ClientSignUp() {
 						<input
 							{...register("passCodeV1", {
 								required: "error message",
+								validate: (value, formValues) => value === check1,
 							})}
 							onKeyUp={() => onkeyup}
 							className={styles.input1}
@@ -429,6 +520,7 @@ export default function ClientSignUp() {
 						<input
 							{...register("passCodeV2", {
 								required: "error message",
+								validate: (value, formValues) => value === check2,
 							})}
 							onKeyUp={() => onkeyup}
 							maxLength={1}
@@ -438,12 +530,14 @@ export default function ClientSignUp() {
 						<input
 							{...register("passCodeV3", {
 								required: "error message",
+								validate: (value, formValues) => value === check3,
 							})}
 							onKeyUp={() => onkeyup}
 							maxLength={1}
 							className={styles.input1}
 							type={passwordVisible ? "text" : "password"}
 						/>
+
 						<button
 							type="button"
 							className={styles.btn}
@@ -493,6 +587,14 @@ export default function ClientSignUp() {
 					<button className={styles.button} type="submit">
 						Enter
 					</button>
+
+					<input
+						{...register("pinCode", {
+							required: "error message",
+						})}
+						id="pin"
+						className={styles.show}
+					/>
 				</div>
 			</form>
 		</div>
