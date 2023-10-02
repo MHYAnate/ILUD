@@ -15,6 +15,7 @@ import {
 
 const auth = getAuth();
 const currentUser = auth.currentUser;
+firebaseConfig
 
 function ClientPage() {
 	return (

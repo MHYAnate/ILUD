@@ -329,15 +329,13 @@ export default function ClientSignUp() {
 				userData.password
 			);
 			const user = result.user;
+
 			router.push(`/client/${user.displayName}`);
-			await sendEmailVerification(currentUser)
-			await updateProfile(currentUser, {
+			await sendEmailVerification(user)
+			await updateProfile(user, {
 				displayName: userName,
 				// photoURL: "https://robohash.org/2?set=set2"
 			})
-		
-			
-		
 	
 			await setDoc(doc(database, "client", user.displayName), {
 				address: userData.address,
