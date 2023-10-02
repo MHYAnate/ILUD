@@ -86,3 +86,11 @@
   border-radius: 3px;
   margin-right: 1em;
 }
+
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}

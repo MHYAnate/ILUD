@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<>
 			{/*<div className="text text-green-700">BismiLLAHI RAHMAANI RAHIIM</div>*/}
-			<div className="flex items-center flex-col w-screen h-screen bg-gray-100">
+			<div className={styles.main}>
 				<div className={styles.header}>
 					<Ilud />
 					<div className={styles.nav}>
