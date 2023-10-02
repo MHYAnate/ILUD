@@ -330,7 +330,7 @@ export default function ClientSignUp() {
 			);
 			const user = result.user;
 
-			router.push(`/client/${user.displayName}`);
+			router.push(`/client/${user.uid}`);
 			await sendEmailVerification(user)
 			await updateProfile(user, {
 				displayName: userName,

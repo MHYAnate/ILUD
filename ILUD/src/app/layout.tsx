@@ -5,7 +5,7 @@ import { store } from './store'
 import { Provider } from 'react-redux'
 
 
-export const metadata = {
+const metadata = {
   title: 'ilud',
   description: 'i link up direct',
 }
